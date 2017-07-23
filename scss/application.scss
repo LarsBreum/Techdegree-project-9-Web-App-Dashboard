@@ -1,12 +1,24 @@
 * {
 	box-style: border-box;
 }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
+	font-family: Raleway;
 }
 wrapper {
 	width: 100%;
+}
+header {
+	margin: 0;
+	background: #7477bf;
+	color: #fff;
+	display: flex;
+	justify-content: space-around;
+}
+wrapper.flex {
+	display: flex;
 }
 
