@@ -10,13 +10,57 @@
 		<wrapper>
 			<header>
 				<h1>My Web App Dashboard</h1>
+				<nav>
+					<ul>
+						<li>Dashboard</li>
+						<input type="search">
+					</ul>
+				</nav>
 			</header>
-			<main>
-				<h2>The main content</h2>
-			</main>
-			<aside>
-				<p>the tiny sidebar</p>
-			</aside>
+			<wrapper class="flex">
+				<main>
+					<h2>The main content</h2>
+					<section class="one-col">
+						<h3>Traffic</h3>
+						<ul>
+							<li>Hourly</li>
+							<li>Daily</li>
+							<li>Weekly</li>
+							<li>Monthly</li>
+						</ul>
+						<div class="graph">Graph</div>
+					</section>
+					<section class="two-col">
+						<div class="left">
+							<h3>Daily traffic</h3>
+						</div>
+						<div class="right">
+							<h3>Mobile users</h3>
+						</div>
+					</section>
+					<section class="social">
+						<div class="twitter">
+							<h3>Twitter</h3>
+						</div>
+						<div class="fb">
+							<h3>Facebook</h3>
+						</div>
+						<div class="g+">
+							<h3>g+</h3>
+						</div>
+					</section>
+				</main>
+				<aside>
+					 <nav>
+					 	<ul>
+					 		<li>icon 1</li>
+					 		<li>icon 2</li>
+					 		<li>icon 3</li>
+					 		<li>icon 4</li>
+					 	</ul>
+					 </nav>
+				</aside>
+			</wrapper>
 			<footer>
 				<p>The footer with all the meta</p>
 			</footer>
