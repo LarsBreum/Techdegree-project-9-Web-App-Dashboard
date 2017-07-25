@@ -16,9 +16,22 @@ header {
 	background: #7477bf;
 	color: #fff;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+}
+header ul {
+	list-style-type: none;
 }
 wrapper.flex {
 	display: flex;
+	flex-direction: column;
+}
+aside {
+	order: 1;
+}
+main {
+	order: 2;
+	padding: 10px;
 }
 
