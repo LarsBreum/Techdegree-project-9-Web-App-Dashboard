@@ -1,4 +1,4 @@
-@import 'utilities/functions'
+@import 'utilities/functions';
 * {
 	box-style: border-box;
 }
@@ -37,6 +37,6 @@ main {
 }
 canvas {
 	width: px-to-pct(320px, 320px);
-	height: 320px;
+	height: 100px;
 }
 

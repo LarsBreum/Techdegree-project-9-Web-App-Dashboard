@@ -1,4 +1,4 @@
 //px-to-pct
-@px-to-pct ($targetW, $containerW) {
+@function px-to-pct ($targetW, $containerW) {
  @return ($targetW / $containerW) * 100%;
 }
