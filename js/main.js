@@ -152,3 +152,46 @@ let monthlyChart = new Chart(monthlyTrafficGraph, {
         }
     }
 });
+
+//get all the options
+const allOptions = $('.graph-nav ul li');
+//get the defualt option
+let selectedOption = $('.graph-nav ul li.active');
+//get the graph-holders
+const graphHolders = $('.graph-holder');
+//toggle the selected graph
+function toggleGraphs(selectedOption) {
+	if (selectedOption.text() === 'Hourly') {
+		graphHolders.hide();
+		$(graphHolders[0]).show();
+	} else if (selectedOption.text() === 'Daily') {
+		graphHolders.hide();
+		$(graphHolders[1]).show();
+	} else if (selectedOption.text() === 'Weekly') {
+		graphHolders.hide();
+		$(graphHolders[2]).show();
+	} else if (selectedOption.text() === 'Monthly') {
+		graphHolders.hide();
+		$(graphHolders[3]).show();
+	}
+}
+toggleGraphs(selectedOption);
+//when one of the options is clicked do stuff
+allOptions.on( "click", function() {
+  SelectedOption = $(this);
+  findGraph(SelectedOption);
+});
+
+function findGraph (newSelectedOption) {
+	//Get the li with the active class
+	let selectedOption = $('.graph-nav ul li.active');
+	//remove class from li
+	selectedOption.removeClass('active');
+	SelectedOption.addClass('active');
+	//toggle the graph
+	toggleGraphs(SelectedOption);
+}
+
+/* First find the option that is already selected
+When a new option is clicked remove the class
+add active to the new selection */

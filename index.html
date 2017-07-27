@@ -26,17 +26,26 @@
 					<h2>The main content</h2>
 					<section class="one-col">
 						<h3>Traffic (one-col)</h3>
-						<canvas id="hourly-traffic"></canvas>
-						<canvas id="daily-traffic"></canvas>
-						<canvas id="weekly-traffic"></canvas>
-						<canvas id="monthly-traffic"></canvas>
-						<ul>
-							<li><a>Hourly</a></li>
-							<li><a>Daily</a></li>
-							<li><a>Weekly</a></li>
-							<li><a>Monthly</a></li>
-						</ul>
-						<div class="graph">Graph</div>
+						<nav class="graph-nav">
+							<ul>
+								<li><a>Hourly</a></li>
+								<li><a>Daily</a></li>
+								<li class="active"><a>Weekly</a></li>
+								<li><a>Monthly</a></li>
+							</ul>
+						</nav>
+							<div class="graph-holder hourly">
+								<canvas id="hourly-traffic"></canvas>
+							</div>
+							<div class="graph-holder daily">
+								<canvas id="daily-traffic"></canvas>
+							</div>
+							<div class="graph-holder weekly">
+								<canvas id="weekly-traffic"></canvas>
+							</div>
+							<div class="graph-holder monthly">
+								<canvas id="monthly-traffic"></canvas>
+							</div>
 					</section>
 					<section class="two-col">
 						<div class="left">
@@ -82,6 +91,8 @@
 				<p>Copyright: Lars Breum</p>
 			</footer>
 		</wrapper>
-		<script type="text/javascript" src="js/main.js"></script>
+		<!-- jQuery-->
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script defer type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
