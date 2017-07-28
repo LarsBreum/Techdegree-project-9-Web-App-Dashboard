@@ -1,8 +1,10 @@
-//Graphs
-let hourlyTrafficGraph = document.getElementById("hourly-traffic")
-let weeklyTrafficGraph = document.getElementById("weekly-traffic");
-let dailyTrafficGraph = document.getElementById("daily-traffic")
-let monthlyTrafficGraph = document.getElementById("monthly-traffic");
+/***********************
+***** LINE CHARTS ******
+***********************/
+let hourlyTrafficGraph = $("#hourly-traffic")
+let weeklyTrafficGraph = $("#weekly-traffic");
+let dailyTrafficGraph = $("#daily-traffic")
+let monthlyTrafficGraph = $("#monthly-traffic");
 
 //Hourly
 function showHourly() {
@@ -174,7 +176,7 @@ const allOptions = $('.graph-nav ul li');
 //get the defualt option
 let selectedOption = $('.graph-nav ul li.active');
 //get the graph-holders
-const graphHolders = $('.graph-holder');
+const graphHolders = $('.line-chart-holder');
 //toggle the selected graph
 function toggleGraphs(selectedOption) {
 	if (selectedOption.text() === 'Hourly') {
@@ -194,7 +196,7 @@ allOptions.on( "click", function() {
   findGraph(SelectedOption);
 });
 
-function findGraph (newSelectedOption) {
+function findGraph (SelectedOption) {
 	//Get the li with the active class
 	let selectedOption = $('.graph-nav ul li.active');
 	//remove class from li
@@ -204,6 +206,58 @@ function findGraph (newSelectedOption) {
 	toggleGraphs(SelectedOption);
 }
 
-/* First find the option that is already selected
-When a new option is clicked remove the class
-add active to the new selection */
+/***********************
+****** BAR CHARTS ******
+***********************/
+
+ let dailyTrafficBarCanvas = $('#daily-traffic-bar');
+ let dailyTrafficBar = new Chart(dailyTrafficBarCanvas, {
+ 	type: 'bar',
+ 	data: {
+ 		labels: ['M', 'T', 'W', 'T', 'F', 'L', 'S'],
+ 		datasets: [{
+ 			label: 'Visitors',
+ 			data: [100, 158, 302, 284, 192, 485, 103],
+ 			backgroundColor: [
+ 				'#7477bf',
+ 				'#7477bf',
+ 				'#7477bf',
+ 				'#7477bf',
+ 				'#7477bf',
+ 				'#7477bf',
+ 				'#7477bf'
+ 			],
+ 			options: {
+ 				scales: {
+ 					yAxes: [{
+ 						ticks: {
+ 							beginAtZero: 'true'
+ 						}
+ 					}]
+ 				}
+ 			}
+ 		}]
+ 	}
+ });
+
+ /**********************
+ ***** DONUT CHART *****
+ **********************/
+let donutCanvas = $('#mobile-users-donut');
+let mobileUsersDonutChart = new Chart(
+	donutCanvas, {
+ 	type: 'doughnut',
+ 	data: {
+ 		labels: ['Phones', 'Tablets', 'Desktops', 'Other'],
+ 		datasets: [{
+ 			label: 'Mobile Users',
+ 			data: [2033, 304, 1404, 120],
+ 			backgroundColor: [
+ 				'#7477bf',
+ 				'tomato',
+ 				'green',
+ 				'orange'
+ 			],
+ 		}]
+ 	}
+ });
