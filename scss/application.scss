@@ -1,3 +1,4 @@
+@import 'utilities/functions';
 * {
 	box-style: border-box;
 }
@@ -45,9 +46,33 @@ main {
 	order: 2;
 	padding: 10px;
 }
+<<<<<<< HEAD
 svg {
 	width: 100%;
 }
 svg .st0 {
 	fill: black;
 }
+=======
+canvas {
+	width: px-to-pct(320px, 320px);
+	height: 100px;
+}
+.graph-nav {
+	ul li {
+		list-style-type: none;
+		display: inline-block;
+		cursor: pointer;
+		padding: 7px;
+	}
+}
+.active {
+	background: tomato;
+	border-radius: 10px;
+	font-weight: bold;
+}
+.graph-holder {
+	display: none;
+}
+
+>>>>>>> graphs
