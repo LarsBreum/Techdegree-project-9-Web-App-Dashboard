@@ -30,6 +30,17 @@ wrapper.flex {
 aside {
   order: 1; }
 
+aside nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0; }
+
+aside ul li {
+  list-style-type: none;
+  flec-grow: 1;
+  padding: 10px; }
+
 main {
   order: 2;
   padding: 10px; }
@@ -49,7 +60,10 @@ canvas {
   border-radius: 10px;
   font-weight: bold; }
 
-.graph-holder {
+.line-chart-holder {
   display: none; }
+
+svg .st0 {
+  fill: black; }
 
 /*# sourceMappingURL=application.css.map */
