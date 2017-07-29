@@ -1,0 +1,17 @@
+/************************
+***** HEADER STYLES *****
+************************/
+
+header {
+	margin: 0;
+	background: #7477bf;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+}
+header ul {
+	list-style-type: none;
+	padding: 0;
+}
