@@ -3,7 +3,8 @@
 ***********************/
 
 aside {
-	order: 1;
+	background: $color-accent-bg;
+	color: $color-font-default;
 }
 aside nav ul {
 	height: 100%;
@@ -13,12 +14,9 @@ aside nav ul {
 }
 aside ul li {
 	list-style-type: none;
-	flec-grow: 1;
+	flex-grow: 1;
 	padding: 10px;
 }
 svg {
 	width: 100%;
-}
-svg .st0 {
-	fill: black;
 }

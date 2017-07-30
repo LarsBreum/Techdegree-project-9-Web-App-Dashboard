@@ -4,14 +4,10 @@
 
 header {
 	margin: 0;
-	background: #7477bf;
+	background: $color-brand-bg;
 	color: #fff;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
 	text-align: center;
-}
-header ul {
-	list-style-type: none;
-	padding: 0;
 }

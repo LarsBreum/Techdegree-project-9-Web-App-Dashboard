@@ -27,15 +27,30 @@ header {
   flex-direction: column;
   text-align: center; }
 
-header ul {
-  list-style-type: none;
+.main-nav {
+  order: 2;
+  background: #cecece;
   padding: 0; }
+  .main-nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0; }
+    .main-nav ul li {
+      padding: 10px;
+      background: #fefefe;
+      align-self: stretch;
+      display: inline-block;
+      height: auto; }
 
 /***********************
 **** SIDEBAR STYLES ****
 ***********************/
 aside {
-  order: 1; }
+  background: #9B9FFF;
+  color: #fefefe; }
 
 aside nav ul {
   height: 100%;
@@ -45,20 +60,17 @@ aside nav ul {
 
 aside ul li {
   list-style-type: none;
-  flec-grow: 1;
+  flex-grow: 1;
   padding: 10px; }
 
 svg {
   width: 100%; }
 
-svg .st0 {
-  fill: black; }
-
 /****************************
 **** MAIN CONTENT STYLES ****
 ****************************/
 main {
-  order: 2;
+  order: 3;
   padding: 10px; }
 
 .graph-nav li {
