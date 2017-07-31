@@ -35,15 +35,21 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0; }
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    height: 50px; }
     .main-nav ul li {
       padding: 10px;
       background: #fefefe;
-      align-self: stretch;
-      display: inline-block;
-      height: auto; }
+      align-self: flex-end;
+      height: 50px;
+      line-height: 30px; }
+    .main-nav ul span {
+      vertical-align: middle; }
+    .main-nav ul input {
+      height: 30px;
+      align-self: center; }
 
 /***********************
 **** SIDEBAR STYLES ****
