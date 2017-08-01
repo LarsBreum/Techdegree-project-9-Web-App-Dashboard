@@ -83,7 +83,7 @@ main {
   list-style-type: none;
   display: inline-block;
   cursor: pointer;
-  padding: 7px; }
+  padding: 10px; }
 .graph-nav ul {
   padding: 0;
   margin: 0 auto; }
@@ -99,7 +99,7 @@ main {
   border-radius: 5px;
   flex-grow: 1;
   flex-basis: 100%;
-  margin: 5px;
+  margin: 10px;
   display: flex;
   justify-content: space-around;
   flex-flow: row nowrap; }
@@ -120,5 +120,42 @@ main {
 
 .social svg {
   width: 50px; }
+
+/*************************************
+** NEWS AND RECENT ACTIVITY SECTION **
+*************************************/
+section.news {
+  display: flex;
+  flex-flow: column; }
+
+.member {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+  margin: 20px; }
+  .member .member-info-container .member-date {
+    float: right; }
+
+.member-img img {
+  border-radius: 50%;
+  width: 100%; }
+
+.member-name {
+  font-weight: bold; }
+
+.recent-activity {
+  display: flex;
+  flex-direction: column; }
+  .recent-activity .activity {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  .recent-activity p {
+    float: left; }
+
+.arrow {
+  float: right; }
 
 /*# sourceMappingURL=application.css.map */

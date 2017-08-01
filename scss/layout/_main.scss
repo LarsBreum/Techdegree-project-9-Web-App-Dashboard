@@ -3,14 +3,14 @@
 ****************************/
 main {
 	order: 3;
-	padding: 10px;
+	padding: $gutter;
 }
 .graph-nav {
 	li {
 		list-style-type: none;
 		display: inline-block;
 		cursor: pointer;
-		padding: 7px;
+		padding: $gutter;
 	}
 	ul {
 		padding: 0;
@@ -25,11 +25,11 @@ main {
 
 .card {
 	background: lightgrey;
-	padding: 20px;
+	padding: $lg-gutter;
 	border-radius: 5px;
 	flex-grow: 1;
 	flex-basis: 100%;
-	margin: 5px;
+	margin: $gutter;
 	display: flex;
 	justify-content: space-around	;
 	flex-flow: row nowrap;

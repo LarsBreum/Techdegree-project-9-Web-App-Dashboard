@@ -1,0 +1,47 @@
+/*************************************
+** NEWS AND RECENT ACTIVITY SECTION **
+*************************************/
+
+section.news {
+	display: flex;
+	flex-flow: column;
+}
+.new-members {
+}
+.member {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	border-bottom: 1px solid $color-border-default;
+	padding-bottom: $gutter;
+	margin: $lg-gutter;
+	.member-info-container {
+		.member-date {
+			float: right;
+		}
+	}
+}
+.member-img {
+	img {
+		border-radius: 50%;
+		width: 100%;
+	}
+}
+.member-name {
+	font-weight: bold;
+}
+.recent-activity {
+	display: flex;
+	flex-direction: column;
+	.activity {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	p {
+		float: left;
+	}
+}
+.arrow {
+	float: right;
+}
