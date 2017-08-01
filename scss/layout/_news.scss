@@ -37,6 +37,9 @@ section.news {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
+		border-bottom: 1px solid $color-border-default;
+		padding-bottom: $gutter;
+		margin: $lg-gutter;
 	}
 	p {
 		float: left;
