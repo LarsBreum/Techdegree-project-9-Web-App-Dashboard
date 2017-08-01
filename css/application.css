@@ -161,4 +161,31 @@ section.news {
 .arrow {
   float: right; }
 
+/******************************
+**** COMMUNICATION SECTION ****
+******************************/
+.message-form fieldset {
+  border: none; }
+
+form input[type="text"], form textarea {
+  padding: 5px;
+  outline: none;
+  background: #eee;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 100%; }
+
+form button {
+  border: none;
+  background: #7477bf;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px; }
+
+form input[type="text"] {
+  margin-bottom: 10px; }
+form textarea {
+  margin-bottom: 10px;
+  min-height: 200px; }
+
 /*# sourceMappingURL=application.css.map */

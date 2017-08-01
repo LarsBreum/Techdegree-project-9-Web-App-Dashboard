@@ -1,3 +1,39 @@
 /******************************
 **** COMMUNICATION SECTION ****
 ******************************/
+.communication {
+}
+.message-form {
+	fieldset {
+		border: none;
+	}
+}
+%input-basic {
+	padding: 5px;
+	outline: none;
+	background: #eee;
+	border: 1px solid grey;
+	border-radius: 5px;
+	width: 100%;
+}
+%btn-basic {
+	border: none;
+	background: $color-brand-bg;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+}
+form {
+	input[type="text"] {
+		@extend %input-basic;
+		margin-bottom: $gutter;
+	}
+	textarea {
+		@extend %input-basic;
+		margin-bottom: $gutter;
+		min-height: 200px;
+	}
+	button {
+		@extend %btn-basic;
+	}
+}
