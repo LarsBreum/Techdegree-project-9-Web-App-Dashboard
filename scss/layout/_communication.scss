@@ -9,7 +9,7 @@ fieldset {
 	outline: none;
 	background: #eee;
 	border: 1px solid grey;
-	border-radius: 5px;
+	@include round-corners($br: 5px);
 	width: 100%;
 }
 %btn-basic {
@@ -17,7 +17,7 @@ fieldset {
 	background: $color-brand-bg;
 	width: 100%;
 	padding: 15px 10px;
-	border-radius: 5px;
+	@include round-corners($br: 5px);
 	margin: $gutter/2 0;
 }
 form {

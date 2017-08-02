@@ -23,16 +23,16 @@ header {
   background: #7477bf;
   color: #fff;
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-between;
-  flex-direction: column; }
+  display: flex; }
   header .t-center {
     text-align: center;
     width: 100%; }
 
 .profile-info {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-end;
+  flex-flow: row wrap;
   justify-content: space-around;
   padding-bottom: 10px; }
   .profile-info .img-container {
@@ -49,6 +49,8 @@ header {
     height: 32px; }
   .profile-info .logged-in {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: flex-end; }
     .profile-info .logged-in * {
       margin: 0 10px; }
@@ -63,7 +65,7 @@ svg.bell {
   .main-nav ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
@@ -90,6 +92,7 @@ aside {
 aside nav ul {
   height: 100%;
   display: flex;
+  flex-flow: column no-wrap;
   justify-content: space-evenly;
   padding: 0; }
 
@@ -120,18 +123,20 @@ main {
 .active {
   background: tomato;
   border-radius: 10px;
+  width: 100%;
   font-weight: bold; }
 
 .card {
   background: lightgrey;
   padding: 20px;
   border-radius: 5px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   flex-grow: 1;
   flex-basis: 100%;
-  margin: 10px;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row nowrap; }
+  margin: 10px; }
   .card h3 {
     margin: 0; }
   .card .card-text-holder {
@@ -143,9 +148,9 @@ main {
 
 .social {
   display: flex;
-  width: 100%;
   flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 100%; }
 
 .social svg {
   width: 50px; }
@@ -155,7 +160,8 @@ main {
 *************************************/
 section.news {
   display: flex;
-  flex-flow: column; }
+  flex-flow: column wrap;
+  justify-content: space-around; }
 
 .member {
   display: flex;
@@ -176,7 +182,8 @@ section.news {
 
 .recent-activity {
   display: flex;
-  flex-direction: column; }
+  flex-flow: column wrap;
+  justify-content: space-around; }
   .recent-activity .activity {
     display: flex;
     flex-flow: row wrap;
@@ -202,6 +209,7 @@ form input[type="text"], form textarea {
   background: #eee;
   border: 1px solid grey;
   border-radius: 5px;
+  width: 100%;
   width: 100%; }
 
 form button {
@@ -210,6 +218,7 @@ form button {
   width: 100%;
   padding: 15px 10px;
   border-radius: 5px;
+  width: 100%;
   margin: 5px 0; }
 
 form {

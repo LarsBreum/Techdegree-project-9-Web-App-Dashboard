@@ -8,8 +8,8 @@ aside {
 }
 aside nav ul {
 	height: 100%;
-	display: flex;
-	justify-content: space-evenly;
+	//display: flex;
+	@include flex ($f-just: space-evenly, $f-dir: column, $f-wrap: no-wrap);
 	padding: 0;
 }
 aside ul li {

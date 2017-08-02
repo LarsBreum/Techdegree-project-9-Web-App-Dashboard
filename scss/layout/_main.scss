@@ -19,20 +19,18 @@ main {
 }
 .active {
 	background: tomato;
-	border-radius: 10px;
+	@include round-corners($br: 10px);
 	font-weight: bold;
 }
 
 .card {
 	background: lightgrey;
 	padding: $lg-gutter;
-	border-radius: 5px;
+	@include round-corners($br: 5px);
+	@include flex($f-wrap: nowrap);
 	flex-grow: 1;
 	flex-basis: 100%;
 	margin: $gutter;
-	display: flex;
-	justify-content: space-around	;
-	flex-flow: row nowrap;
 	h3 {
 		margin: 0;
 	}
@@ -45,10 +43,8 @@ main {
 	font-size: 1.3em;
 }
 .social {
-	display: flex;
+	@include flex;
 	width: 100%;
-	flex-flow: row wrap;
-	justify-content: space-around;
 }
 .social svg {
 	width: 50px;

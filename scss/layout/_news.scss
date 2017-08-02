@@ -3,15 +3,12 @@
 *************************************/
 
 section.news {
-	display: flex;
-	flex-flow: column;
+	@include flex($f-dir: column);
 }
 .new-members {
 }
 .member {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+	@include flex ($f-just: center);
 	border-bottom: 1px solid $color-border-default;
 	padding-bottom: $gutter;
 	margin: $lg-gutter;
@@ -30,12 +27,9 @@ section.news {
 	font-weight: bold;
 }
 .recent-activity {
-	display: flex;
-	flex-direction: column;
+	@include flex ($f-dir: column);
 	.activity {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
+		@include flex ($f-just: center);
 		border-bottom: 1px solid $color-border-default;
 		padding-bottom: $gutter;
 		margin: $lg-gutter;
