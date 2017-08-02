@@ -1,0 +1,50 @@
+/************************
+***** HEADER STYLES *****
+************************/
+
+header {
+	margin: 0;
+	background: $color-brand-bg;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	.t-center {
+		text-align: center;
+		width: 100%;
+	}
+}
+.profile-info {
+	//@include-flex ($f-just: flex-end);
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-end;
+	justify-content: space-around;
+	padding-bottom: $gutter;
+	.img-container {
+		@include img-container;
+		display: inline-block;
+	}
+	.member-img {
+		@include img-container;
+		display: inline-block;
+		img {
+			@include round-corners;
+		}
+	}
+	.member-name {
+		display: inline-block;
+		height: 32px;
+	}
+	.logged-in {
+		display: flex;
+		align-items: flex-end;
+		* {
+			margin: 0 $gutter;
+		}
+	}
+}
+
+svg.bell {
+	color: white;
+}

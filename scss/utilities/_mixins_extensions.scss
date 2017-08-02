@@ -1,0 +1,16 @@
+//mixins and extensions
+@mixin img-container ($w: 32px) {
+	width: $w;
+}
+@mixin round-corners ($br: 50%, $w: 100%) {
+	border-radius: $br;
+	width: $w;
+}
+@mixin flex ($f-dir: row,
+				$f-wrap: wrap,
+				$f-just: space-around) {
+	display: flex;
+	flex-flow: $f-dir $f-wrap;
+	justify-content: $f-just;
+	@content;
+}
