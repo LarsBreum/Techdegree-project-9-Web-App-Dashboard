@@ -3,7 +3,7 @@
 ****************************/
 main {
 	order: 3;
-	padding: $gutter;
+	padding: 0 $gutter $gutter $gutter;
 }
 .graph-nav {
 	li {

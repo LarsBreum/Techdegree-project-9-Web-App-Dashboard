@@ -1,12 +1,8 @@
 /******************************
 **** COMMUNICATION SECTION ****
 ******************************/
-.communication {
-}
-.message-form {
-	fieldset {
-		border: none;
-	}
+fieldset {
+	border: none;
 }
 %input-basic {
 	padding: 5px;
@@ -20,13 +16,16 @@
 	border: none;
 	background: $color-brand-bg;
 	width: 100%;
-	padding: 10px;
+	padding: 15px 10px;
 	border-radius: 5px;
+	margin: $gutter/2 0;
 }
 form {
+	margin-top: $gutter;
+	border-bottom: 1px solid $color-border-default;
 	input[type="text"] {
 		@extend %input-basic;
-		margin-bottom: $gutter;
+		margin: $gutter 0;
 	}
 	textarea {
 		@extend %input-basic;
@@ -35,5 +34,8 @@ form {
 	}
 	button {
 		@extend %btn-basic;
+	}
+	button[type="reset"] {
+		background: $color-accent-bg;
 	}
 }
