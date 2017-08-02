@@ -23,8 +23,7 @@ section.news {
 }
 .member-img {
 	img {
-		border-radius: 50%;
-		width: 100%;
+		@include round-corners;
 	}
 }
 .member-name {

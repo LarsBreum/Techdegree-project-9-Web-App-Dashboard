@@ -24,8 +24,37 @@ header {
   color: #fff;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  text-align: center; }
+  flex-direction: column; }
+  header .t-center {
+    text-align: center;
+    width: 100%; }
+
+.profile-info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-bottom: 10px; }
+  .profile-info .img-container {
+    width: 32px;
+    display: inline-block; }
+  .profile-info .member-img {
+    width: 32px;
+    display: inline-block; }
+    .profile-info .member-img img {
+      border-radius: 50%;
+      width: 100%; }
+  .profile-info .member-name {
+    display: inline-block;
+    height: 32px; }
+  .profile-info .logged-in {
+    display: flex;
+    align-items: flex-end; }
+    .profile-info .logged-in * {
+      margin: 0 10px; }
+
+svg.bell {
+  color: white; }
 
 .main-nav {
   order: 2;
