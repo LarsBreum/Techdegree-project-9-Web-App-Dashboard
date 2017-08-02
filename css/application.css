@@ -123,7 +123,7 @@ main {
 .active {
   background: tomato;
   border-radius: 10px;
-  width: 100%;
+  width: auto;
   font-weight: bold; }
 
 .card {

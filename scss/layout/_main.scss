@@ -2,50 +2,50 @@
 **** MAIN CONTENT STYLES ****
 ****************************/
 main {
-	order: 3;
-	padding: 0 $gutter $gutter $gutter;
+  order: 3;
+  padding: 0 $gutter $gutter $gutter;
 }
 .graph-nav {
-	li {
-		list-style-type: none;
-		display: inline-block;
-		cursor: pointer;
-		padding: $gutter;
-	}
-	ul {
-		padding: 0;
-		margin: 0 auto;	
-	}
+  li {
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: $gutter;
+    }
+  ul {
+    padding: 0;
+    margin: 0 auto; 
+    }
 }
 .active {
-	background: tomato;
-	@include round-corners($br: 10px);
-	font-weight: bold;
+  background: tomato;
+  @include round-corners($br: 10px, $w: auto);
+  font-weight: bold;
 }
 
 .card {
-	background: lightgrey;
-	padding: $lg-gutter;
-	@include round-corners($br: 5px);
-	@include flex($f-wrap: nowrap);
-	flex-grow: 1;
-	flex-basis: 100%;
-	margin: $gutter;
-	h3 {
-		margin: 0;
-	}
-	.card-text-holder {
-		width: 50px;
-	}
+  background: lightgrey;
+  padding: $lg-gutter;
+  @include round-corners($br: 5px);
+  @include flex($f-wrap: nowrap);
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: $gutter;
+  h3 {
+      margin: 0;
+  }
+  .card-text-holder {
+      width: 50px;
+  }
 }
 .visitor-num {
-	font-weight: bold;
-	font-size: 1.3em;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 .social {
-	@include flex;
-	width: 100%;
+  @include flex;
+  width: 100%;
 }
 .social svg {
-	width: 50px;
+  width: 50px;
 }
