@@ -3,7 +3,10 @@
 ****************************/
 main {
   order: 3;
-  padding: 0 $gutter $gutter $gutter;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    flex-basis: 100%;
+  }
 }
 .graph-nav {
   li {
@@ -11,14 +14,15 @@ main {
     display: inline-block;
     cursor: pointer;
     padding: $gutter;
-    }
+    transition: background .3s ease-in-out, border-radius -3s ease-in-out;
+  }
   ul {
     padding: 0;
     margin: 0 auto; 
-    }
+  }
 }
 .active {
-  background: tomato;
+  background: $color-brand-bg;
   @include round-corners($br: 10px, $w: auto);
   font-weight: bold;
 }
@@ -48,4 +52,24 @@ main {
 }
 .social svg {
   width: 50px;
+}
+.one-col {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .two-col {
+    max-width: 718px;
+    display: flex;
+    flex-flow: row nowrap;
+    .left {
+      flex-grow: 1;
+    }
+    .right {
+      flex-grow: 1;
+    }
+  }
+  .three-col {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 }

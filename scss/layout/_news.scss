@@ -3,41 +3,53 @@
 *************************************/
 
 section.news {
-	@include flex($f-dir: column);
-}
-.new-members {
-}
-.member {
-	@include flex ($f-just: center);
-	border-bottom: 1px solid $color-border-default;
-	padding-bottom: $gutter;
-	margin: $lg-gutter;
-	.member-info-container {
-		.member-date {
-			float: right;
+	@include flex($f-dir: row);
+	padding: 0 $lg-gutter 0 $lg-gutter;
+	@media screen and (min-width: $br-med) {
+			flex-flow: row nowrap;
+			align-items: flex-start;
+	}
+	.new-members,
+	.recent-activity {
+		width: 100%;
+		padding: 2px;
+		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: center);
+		.member,
+		.activity {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			padding: $gutter 0 $gutter 0;
 		}
 	}
 }
-.member-img {
-	img {
-		@include round-corners;
-	}
+.time-passed {
+	display: block;				
+}
+.activity-info {
+	width: 100%;
 }
 .member-name {
 	font-weight: bold;
 }
-.recent-activity {
-	@include flex ($f-dir: column);
-	.activity {
-		@include flex ($f-just: center);
-		border-bottom: 1px solid $color-border-default;
-		padding-bottom: $gutter;
-		margin: $lg-gutter;
+.member-info-container {
+	.member-date {
+		display: block;
 	}
-	p {
-		float: left;
+
+	.member-email {
+		display: block;
 	}
 }
 .arrow {
 	float: right;
 }
+.member-img {
+	width: 50px;
+	margin-right: $gutter/2;
+	img {
+		width: 50px;
+	}
+}
+
+

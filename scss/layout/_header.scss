@@ -7,38 +7,59 @@ header {
 	background: $color-brand-bg;
 	color: #fff;
 	@include flex ($f-just: space-between, $f-dir: column);
-	display: flex;
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 $lg-gutter 0 $lg-gutter;
+	}
 	.t-center {
 		text-align: center;
 		width: 100%;
+		@media screen and (min-width: 768px) {
+			width: auto;
+			text-align: left;
+		}
 	}
 }
 .profile-info {
 	@include flex ($f-just: space-around);
 	padding-bottom: $gutter;
+	align-items: center;
+	@media screen and (min-width: 768px) {
+		height: 100%;
+		padding: 0;
+	}
 	.img-container {
 		@include img-container;
-		display: inline-block;
 	}
-	.member-img {
-		@include img-container;
-		display: inline-block;
-		img {
-			@include round-corners;
-		}
-	}
-	.member-name {
-		display: inline-block;
-		height: 32px;
-	}
-	.logged-in {
-		@include flex();
-		align-items: flex-end;
-		* {
-			margin: 0 $gutter;
+	.bell {
+		@media screen and (min-width: 768px) {
+			border-right: 1px solid lightblue;
+			width: 42px;
+			padding-right: 10px;
 		}
 	}
 }
+.member-img {
+	@include img-container;
+	display: inline-block;
+	img {
+		@include round-corners;
+	}
+}
+.member-name {
+	display: inline-block;
+	height: 32px;
+}
+.logged-in {
+	@include flex();
+	align-items: flex-end;
+	* {
+		margin: 0 $gutter;
+	}
+}
+
 
 svg.bell {
 	color: white;

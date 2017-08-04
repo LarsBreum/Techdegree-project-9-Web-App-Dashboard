@@ -8,14 +8,20 @@ aside {
 }
 aside nav ul {
 	height: 100%;
-	//display: flex;
-	@include flex ($f-just: space-evenly, $f-dir: column, $f-wrap: no-wrap);
+	@include flex ($f-just: space-around, $f-dir: column, $f-wrap: no-wrap);
 	padding: 0;
+	@media screen and (min-width: 768px) {
+		flex-direction: column;
+		flex-basis: 5%;
+		justify-content: space-evenly;
+		width: 50px;
+	}
 }
 aside ul li {
 	list-style-type: none;
 	flex-grow: 1;
 	padding: 10px;
+	max-width: 50px;
 }
 svg {
 	width: 100%;

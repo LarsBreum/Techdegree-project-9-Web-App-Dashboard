@@ -12,6 +12,12 @@ wrapper {
 	width: 100%;	
 }
 wrapper.flex {
-	display: flex;
-	flex-direction: column;
+	@include flex ($f-dir: column, $f-wrap: nowrap);
+	@media screen and (min-width: 768px) {
+		flex-flow: row nowrap;
+		justify-content: flex-start	;
+	}
+}
+section {
+	padding: 0 $gutter 0 $gutter;
 }
