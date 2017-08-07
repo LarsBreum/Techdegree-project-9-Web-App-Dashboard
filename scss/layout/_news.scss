@@ -8,11 +8,14 @@ section.news {
 	@media screen and (min-width: $br-med) {
 			flex-flow: row nowrap;
 			align-items: flex-start;
+			.new-members {
+				border-right: 1px solid $color-border-default;
+			}
 	}
 	.new-members,
 	.recent-activity {
+		padding: $lg-gutter;
 		width: 100%;
-		padding: 2px;
 		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: center);
 		.member,
 		.activity {
@@ -20,6 +23,9 @@ section.news {
 			display: flex;
 			align-items: center;
 			padding: $gutter 0 $gutter 0;
+			@media screen and (min-width: $br-lg) {
+				border-bottom: 1px solid $color-border-default;
+			}
 		}
 	}
 }

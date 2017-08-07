@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway");
+form input[type="text"], form textarea {
+  padding: 5px;
+  outline: none;
+  background: #eee;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 100%;
+  width: 100%; }
+
+form button {
+  border: none;
+  background: #7477bf;
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -21,7 +39,8 @@ wrapper.flex {
       justify-content: flex-start; } }
 
 section {
-  padding: 0 10px 0 10px; }
+  border-bottom: 1px solid lightgrey;
+  padding: 0 20px; }
 
 /************************
 ***** HEADER STYLES *****
@@ -139,7 +158,8 @@ aside ul li {
   list-style-type: none;
   flex-grow: 1;
   padding: 10px;
-  max-width: 50px; }
+  max-width: 50px;
+  color: grey; }
 
 svg {
   width: 100%; }
@@ -154,6 +174,9 @@ main {
     main {
       flex-basis: 100%; } }
 
+.social-stats h3 {
+  margin-bottom: 2px; }
+
 .graph-nav li {
   list-style-type: none;
   display: inline-block;
@@ -163,6 +186,10 @@ main {
 .graph-nav ul {
   padding: 0;
   margin: 0 auto; }
+
+.line-chart-holder {
+  width: 100%;
+  padding-bottom: 20px; }
 
 .active {
   background: #7477bf;
@@ -180,7 +207,11 @@ main {
   justify-content: space-around;
   flex-grow: 1;
   flex-basis: 100%;
-  margin: 10px; }
+  margin: 10px 0; }
+  @media screen and (min-width: 768px) {
+    .card {
+      flex-basis: 30%;
+      flex-grow: 0; } }
   .card h3 {
     margin: 0; }
   .card .card-text-holder {
@@ -192,9 +223,14 @@ main {
 
 .social {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  width: 100%; }
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0; }
+  @media screen and (min-width: 768px) {
+    .social {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; } }
 
 .social svg {
   width: 50px; }
@@ -204,17 +240,12 @@ main {
 
 @media screen and (min-width: 768px) {
   .two-col {
-    max-width: 718px;
     display: flex;
     flex-flow: row nowrap; }
     .two-col .left {
       flex-grow: 1; }
     .two-col .right {
-      flex-grow: 1; }
-
-  .three-col {
-    display: flex;
-    flex-flow: row nowrap; } }
+      flex-grow: 1; } }
 /*************************************
 ** NEWS AND RECENT ACTIVITY SECTION **
 *************************************/
@@ -226,11 +257,13 @@ section.news {
   @media screen and (min-width: 768px) {
     section.news {
       flex-flow: row nowrap;
-      align-items: flex-start; } }
+      align-items: flex-start; }
+      section.news .new-members {
+        border-right: 1px solid lightgrey; } }
   section.news .new-members,
   section.news .recent-activity {
+    padding: 20px;
     width: 100%;
-    padding: 2px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center; }
@@ -242,6 +275,12 @@ section.news {
       display: flex;
       align-items: center;
       padding: 10px 0 10px 0; }
+      @media screen and (min-width: 1024px) {
+        section.news .new-members .member,
+        section.news .new-members .activity,
+        section.news .recent-activity .member,
+        section.news .recent-activity .activity {
+          border-bottom: 1px solid lightgrey; } }
 
 .time-passed {
   display: block; }
@@ -272,24 +311,6 @@ section.news {
 fieldset {
   border: none; }
 
-form input[type="text"], form textarea {
-  padding: 5px;
-  outline: none;
-  background: #eee;
-  border: 1px solid grey;
-  border-radius: 5px;
-  width: 100%;
-  width: 100%; }
-
-form button {
-  border: none;
-  background: #7477bf;
-  width: 100%;
-  padding: 15px 10px;
-  border-radius: 5px;
-  width: 100%;
-  margin: 5px 0; }
-
 form {
   margin-top: 10px;
   border-bottom: 1px solid lightgrey; }
@@ -297,10 +318,36 @@ form {
     margin: 10px 0; }
   form textarea {
     margin-bottom: 10px;
-    min-height: 200px; }
+    min-height: 100px; }
   form button[type="reset"] {
     background: #9B9FFF; }
 
+@media screen and (min-width: 1024px) {
+  .communication {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly; }
+    .communication .send-message {
+      flex-grow: 1;
+      flex-basis: 50%;
+      border-right: 1px solid lightgrey; }
+    .communication .settings {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      flex-grow: 1;
+      flex-basis: 50%; }
+      .communication .settings button {
+        width: 44%;
+        display: inline-block; }
+      .communication .settings button[type="submit"] {
+        float: left;
+        margin-right: 3%; }
+      .communication .settings button[type="reset"] {
+        float: right;
+        margin-left: 3%; }
+      .communication .settings label {
+        line-height: 50px; } }
 /*****************************
 ******* FOOTER STYLES ********
 *****************************/

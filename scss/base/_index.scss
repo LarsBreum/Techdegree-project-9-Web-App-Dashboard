@@ -19,5 +19,7 @@ wrapper.flex {
 	}
 }
 section {
-	padding: 0 $gutter 0 $gutter;
+	border-bottom: 1px solid $color-border-default;
+	padding: 0 $lg-gutter;
+
 }
