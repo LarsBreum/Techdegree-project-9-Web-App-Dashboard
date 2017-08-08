@@ -174,14 +174,15 @@ aside nav ul {
   @media screen and (min-width: 768px) {
     aside nav ul {
       flex-direction: column;
-      flex-basis: 5%;
+      align-items: center;
       justify-content: space-evenly;
-      width: 50px; } }
+      width: 68px; } }
 
 aside ul li {
+  margin: 10px 0;
   list-style-type: none;
   flex-grow: 1;
-  padding: 10px;
+  padding: 0 10px;
   max-width: 50px;
   color: grey; }
 
