@@ -12,6 +12,31 @@ wrapper {
 	width: 100%;	
 }
 wrapper.flex {
-	display: flex;
-	flex-direction: column;
+	@include flex ($f-dir: column, $f-wrap: nowrap);
+	@media screen and (min-width: 768px) {
+		flex-flow: row nowrap;
+		justify-content: flex-start	;
+	}
+}
+section {
+	border-bottom: 1px solid $color-border-default;
+	padding: 0 $lg-gutter;
+}
+.one-col {
+	@include max-width;
+	padding: $gutter 0;
+}
+.two-col {
+	@include max-width;
+	@media screen and (min-width: $br-med) {
+		@include flex($f-wrap: nowrap);
+	}
+	padding: $gutter 0;
+}
+.three-col {
+	@include max-width;
+	@media screen and (min-width: $br-lg) {
+		@include flex($f-wrap: nowrap);
+	}
+	padding: $gutter 0;
 }

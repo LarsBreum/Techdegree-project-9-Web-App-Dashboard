@@ -2,48 +2,60 @@
 ** NEWS AND RECENT ACTIVITY SECTION **
 *************************************/
 
-section.news {
-	display: flex;
-	flex-flow: column;
+.news {
+	justify-content: space-evenly;
+}
+%member-and-activity {
+	@media screen and (min-width: $br-med) {
+		padding: $lg-gutter;
+	}
+	width: 100%;
 }
 .new-members {
-}
-.member {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	border-bottom: 1px solid $color-border-default;
-	padding-bottom: $gutter;
-	margin: $lg-gutter;
-	.member-info-container {
-		.member-date {
-			float: right;
-		}
+	@extend %member-and-activity;
+	@media screen and (min-width: $br-med) {
+		border-right: 1px solid $color-border-default;
 	}
-}
-.member-img {
-	img {
-		@include round-corners;
-	}
-}
-.member-name {
-	font-weight: bold;
 }
 .recent-activity {
-	display: flex;
-	flex-direction: column;
-	.activity {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		border-bottom: 1px solid $color-border-default;
-		padding-bottom: $gutter;
-		margin: $lg-gutter;
-	}
-	p {
-		float: left;
-	}
+	@extend %member-and-activity;
 }
-.arrow {
-	float: right;
+.member,
+.activity {
+	padding: $gutter 0;
+	width: 100%;
+	border-bottom: 1px solid $color-border-default;
+	@media screen and (min-width: $br-med) {
+		height: 100px;
+		@include flex($f-wrap: nowrap, $f-just: flex-start);
+		align-items: center;
+		padding: $gutter 0 $gutter 0;
+	}
+	.activity-info {
+		width: 100%;
+	}
+	.member-img {
+		width: 50px;
+		@media screen and (min-width: $br-med) {
+			margin-right: $gutter;			
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+	.member-name {
+		font-weight: bold;
+	}
+	.member-email {
+		display: block;
+	}
+	.time-passed {
+		display: block;
+	}
+	.arrow {
+		float: right;
+	}
+	.member-date {
+	}
 }

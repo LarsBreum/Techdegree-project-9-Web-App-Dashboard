@@ -8,9 +8,34 @@
 }
 @mixin flex ($f-dir: row,
 				$f-wrap: wrap,
-				$f-just: space-around) {
+				$f-just: space-between) {
 	display: flex;
 	flex-flow: $f-dir $f-wrap;
 	justify-content: $f-just;
 	@content;
 }
+@mixin max-width {
+	margin: 0 auto;	
+	max-width: $br-lg;
+}
+
+
+//exentension
+//input extensions
+%input-basic {
+	padding: 5px;
+	outline: none;
+	background: #eee;
+	border: 1px solid grey;
+	@include round-corners($br: 5px);
+	width: 100%;
+}
+%btn-basic {
+	border: none;
+	background: $color-brand-bg;
+	width: 100%;
+	padding: 15px 10px;
+	@include round-corners($br: 5px);
+	margin: $gutter/2 0;
+}
+

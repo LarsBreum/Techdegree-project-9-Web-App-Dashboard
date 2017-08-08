@@ -1,21 +1,23 @@
 .main-nav {
-	order: 2;
 	background: #cecece;
 	padding: 0;
+	@media screen and (min-width: 768px) {
+		padding: 0 20px 0 0;
+	}
 	ul {
 		list-style-type: none;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		padding: 0;
+		@include flex ($f-just: space-between);
 		margin: 0;
 		height: 50px;
+		padding: 0;
+		width: 100%;
 		li {	
-			padding: 10px;
+			padding: 10px 10px 10px 0;
 			background: $color-main-bg;
 			align-self: flex-end;
 			height: 50px;
 			line-height: 30px;
+			padding-left: $gutter;
 			}
 			span {
 				vertical-align: middle;
