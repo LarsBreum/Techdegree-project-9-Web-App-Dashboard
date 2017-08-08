@@ -39,7 +39,7 @@ main {
   background: lightgrey;
   padding: $lg-gutter;
   @include round-corners($br: 5px);
-  @include flex($f-wrap: nowrap);
+  @include flex($f-wrap: nowrap, $f-just: space-around);
   flex-grow: 1;
   flex-basis: 100%;
   margin: 10px 0;
@@ -59,40 +59,27 @@ main {
   font-size: 1.3em;
 }
 .social {
-  @include max-width;
+   @include max-width;
 }
 .card-holder {
   @include flex ($f-dir: column);
   width: 100%;
   padding: $lg-gutter 0;
-  @media screen and (min-width: 768px) {
-      @include flex($f-dir: row, $f-wrap: nowrap, $f-just: space-between);
-  }
 }
 
 .social svg {
   width: 50px;
 }
-.one-col {
-  text-align: left;
-  @include max-width;
-  nav {
-    text-align: center;
-  }   
-}
+
 @media screen and (min-width: 768px) {
-  .two-col {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    @include max-width;
-    .left {
-      flex-grow: 1;
-      margin-right: $gutter;
-    }
-    .right {
-      flex-grow: 1;
-      margin-left: $gutter;
-    }
+  .left {
+    flex-grow: 1;
+    margin-right: $gutter;
+    border-right: 1px solid $color-border-default;
+  }
+  .right {
+    flex-grow: 1;
+    margin-left: $gutter;
   }
 }
+

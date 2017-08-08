@@ -8,7 +8,7 @@
 }
 @mixin flex ($f-dir: row,
 				$f-wrap: wrap,
-				$f-just: space-around) {
+				$f-just: space-between) {
 	display: flex;
 	flex-flow: $f-dir $f-wrap;
 	justify-content: $f-just;

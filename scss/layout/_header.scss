@@ -21,6 +21,10 @@ header {
 			text-align: left;
 		}
 	}
+	.member-name {
+		display: inline-block;
+		height: 32px;
+	}
 }
 .profile-info {
 	@include flex ($f-just: space-around);
@@ -47,10 +51,6 @@ header {
 	img {
 		@include round-corners;
 	}
-}
-.member-name {
-	display: inline-block;
-	height: 32px;
 }
 .logged-in {
 	@include flex();

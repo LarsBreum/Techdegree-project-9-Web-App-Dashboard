@@ -2,7 +2,57 @@
 ** NEWS AND RECENT ACTIVITY SECTION **
 *************************************/
 
-section .section-container {
+.news {
+	justify-content: space-evenly;
+}
+%member-and-activity {
+	padding: $lg-gutter;
+	width: 100%;
+
+}
+.new-members {
+	@extend %member-and-activity;
+	border-right: 1px solid $color-border-default;
+}
+.recent-activity {
+	@extend %member-and-activity;
+}
+.member,
+.activity {
+	height: 100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: $gutter 0 $gutter 0;
+	@media screen and (min-width: $br-lg) {
+		border-bottom: 1px solid $color-border-default;
+	}
+	.activity-info {
+		width: 100%;
+	}
+	.member-img {
+		width: 50px;
+		margin-right: $gutter;
+		img {
+			width: 100%;
+		}
+	}
+	.member-name {
+		font-weight: bold;
+	}
+	.member-email {
+		display: block;
+	}
+	.time-passed {
+		display: block;
+	}
+	.arrow {
+		float: right;
+	}
+}
+
+
+/* section .section-container {
 	@include flex($f-dir: row);
 	padding: 0 $lg-gutter 0 $lg-gutter;
 	@include max-width;
@@ -18,45 +68,8 @@ section .section-container {
 		padding: $lg-gutter 0 $lg-gutter $lg-gutter;
 		width: 100%;
 		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: center);
-		.member,
-		.activity {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			padding: $gutter 0 $gutter 0;
-			@media screen and (min-width: $br-lg) {
-				border-bottom: 1px solid $color-border-default;
-			}
+		
 		}
 	}
 }
-.time-passed {
-	display: block;				
-}
-.activity-info {
-	width: 100%;
-}
-.member-name {
-	font-weight: bold;
-}
-.member-info-container {
-	.member-date {
-		display: block;
-	}
-
-	.member-email {
-		display: block;
-	}
-}
-.arrow {
-	float: right;
-}
-.member-img {
-	width: 50px;
-	margin-right: $gutter/2;
-	img {
-		width: 50px;
-	}
-}
-
-
+*/

@@ -32,7 +32,7 @@ wrapper {
 wrapper.flex {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around; }
+  justify-content: space-between; }
   @media screen and (min-width: 768px) {
     wrapper.flex {
       flex-flow: row nowrap;
@@ -42,17 +42,27 @@ section {
   border-bottom: 1px solid lightgrey;
   padding: 0 20px; }
 
-/* .one-col {
-	@include max-width;
-}
+.one-col {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 10px 0; }
+
 .two-col {
-	@include max-width;
-	@include flex($f-wrap: nowrap);
-}
+  margin: 0 auto;
+  max-width: 1024px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 10px 0; }
+
 .three-col {
-	@include max-width;
-	@include flex($f-wrap: nowrap);
-} */
+  margin: 0 auto;
+  max-width: 1024px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 10px 0; }
+
 /************************
 ***** HEADER STYLES *****
 ************************/
@@ -76,6 +86,9 @@ header {
       header .t-center {
         width: auto;
         text-align: left; } }
+  header .member-name {
+    display: inline-block;
+    height: 32px; }
 
 .profile-info {
   display: flex;
@@ -102,14 +115,10 @@ header {
     border-radius: 50%;
     width: 100%; }
 
-.member-name {
-  display: inline-block;
-  height: 32px; }
-
 .logged-in {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end; }
   .logged-in * {
     margin: 0 10px; }
@@ -240,99 +249,90 @@ main {
 .card-holder {
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   padding: 20px 0; }
-  @media screen and (min-width: 768px) {
-    .card-holder {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between; } }
 
 .social svg {
   width: 50px; }
 
-.one-col {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 1024px; }
-  .one-col nav {
-    text-align: center; }
-
 @media screen and (min-width: 768px) {
-  .two-col {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1024px; }
-    .two-col .left {
-      flex-grow: 1;
-      margin-right: 10px; }
-    .two-col .right {
-      flex-grow: 1;
-      margin-left: 10px; } }
+  .left {
+    flex-grow: 1;
+    margin-right: 10px;
+    border-right: 1px solid lightgrey; }
+
+  .right {
+    flex-grow: 1;
+    margin-left: 10px; } }
 /*************************************
 ** NEWS AND RECENT ACTIVITY SECTION **
 *************************************/
-section .section-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 0 20px 0 20px;
-  margin: 0 auto;
-  max-width: 1024px; }
-  @media screen and (min-width: 768px) {
-    section .section-container {
-      flex-flow: row nowrap;
-      align-items: flex-start; }
-      section .section-container .new-members {
-        border-right: 1px solid lightgrey; } }
-  section .section-container .recent-activity,
-  section .section-container .new-members {
-    padding: 20px 0 20px 20px;
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center; }
-    section .section-container .recent-activity .member,
-    section .section-container .recent-activity .activity,
-    section .section-container .new-members .member,
-    section .section-container .new-members .activity {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      padding: 10px 0 10px 0; }
-      @media screen and (min-width: 1024px) {
-        section .section-container .recent-activity .member,
-        section .section-container .recent-activity .activity,
-        section .section-container .new-members .member,
-        section .section-container .new-members .activity {
-          border-bottom: 1px solid lightgrey; } }
+.news {
+  justify-content: space-evenly; }
 
-.time-passed {
-  display: block; }
-
-.activity-info {
+.new-members, .recent-activity {
+  padding: 20px;
   width: 100%; }
 
-.member-name {
-  font-weight: bold; }
+.new-members {
+  border-right: 1px solid lightgrey; }
 
-.member-info-container .member-date {
-  display: block; }
-.member-info-container .member-email {
-  display: block; }
+.member,
+.activity {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 0; }
+  @media screen and (min-width: 1024px) {
+    .member,
+    .activity {
+      border-bottom: 1px solid lightgrey; } }
+  .member .activity-info,
+  .activity .activity-info {
+    width: 100%; }
+  .member .member-img,
+  .activity .member-img {
+    width: 50px;
+    margin-right: 10px; }
+    .member .member-img img,
+    .activity .member-img img {
+      width: 100%; }
+  .member .member-name,
+  .activity .member-name {
+    font-weight: bold; }
+  .member .member-email,
+  .activity .member-email {
+    display: block; }
+  .member .time-passed,
+  .activity .time-passed {
+    display: block; }
+  .member .arrow,
+  .activity .arrow {
+    float: right; }
 
-.arrow {
-  float: right; }
-
-.member-img {
-  width: 50px;
-  margin-right: 5px; }
-  .member-img img {
-    width: 50px; }
-
+/* section .section-container {
+	@include flex($f-dir: row);
+	padding: 0 $lg-gutter 0 $lg-gutter;
+	@include max-width;
+	@media screen and (min-width: $br-med) {
+			flex-flow: row nowrap;
+			align-items: flex-start;
+			.new-members {
+				border-right: 1px solid $color-border-default;
+			}
+	}
+	.recent-activity,
+	.new-members {
+		padding: $lg-gutter 0 $lg-gutter $lg-gutter;
+		width: 100%;
+		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: center);
+		
+		}
+	}
+}
+*/
 /******************************
 **** COMMUNICATION SECTION ****
 ******************************/

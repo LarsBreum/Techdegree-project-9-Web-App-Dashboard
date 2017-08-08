@@ -22,14 +22,17 @@ section {
 	border-bottom: 1px solid $color-border-default;
 	padding: 0 $lg-gutter;
 }
-/* .one-col {
+.one-col {
 	@include max-width;
+	padding: $gutter 0;
 }
 .two-col {
 	@include max-width;
 	@include flex($f-wrap: nowrap);
+	padding: $gutter 0;
 }
 .three-col {
 	@include max-width;
 	@include flex($f-wrap: nowrap);
-} */
+	padding: $gutter 0;
+}
