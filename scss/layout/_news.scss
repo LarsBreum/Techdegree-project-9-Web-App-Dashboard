@@ -6,33 +6,40 @@
 	justify-content: space-evenly;
 }
 %member-and-activity {
-	padding: $lg-gutter;
+	@media screen and (min-width: $br-med) {
+		padding: $lg-gutter;
+	}
 	width: 100%;
-
 }
 .new-members {
 	@extend %member-and-activity;
-	border-right: 1px solid $color-border-default;
+	@media screen and (min-width: $br-med) {
+		border-right: 1px solid $color-border-default;
+	}
 }
 .recent-activity {
 	@extend %member-and-activity;
 }
 .member,
 .activity {
-	height: 100px;
+	padding: $gutter 0;
 	width: 100%;
-	display: flex;
-	align-items: center;
-	padding: $gutter 0 $gutter 0;
-	@media screen and (min-width: $br-lg) {
-		border-bottom: 1px solid $color-border-default;
+	border-bottom: 1px solid $color-border-default;
+	@media screen and (min-width: $br-med) {
+		height: 100px;
+		@include flex($f-wrap: nowrap, $f-just: flex-start);
+		align-items: center;
+		padding: $gutter 0 $gutter 0;
 	}
 	.activity-info {
 		width: 100%;
 	}
 	.member-img {
 		width: 50px;
-		margin-right: $gutter;
+		@media screen and (min-width: $br-med) {
+			margin-right: $gutter;			
+		}
+
 		img {
 			width: 100%;
 		}
@@ -49,27 +56,6 @@
 	.arrow {
 		float: right;
 	}
-}
-
-
-/* section .section-container {
-	@include flex($f-dir: row);
-	padding: 0 $lg-gutter 0 $lg-gutter;
-	@include max-width;
-	@media screen and (min-width: $br-med) {
-			flex-flow: row nowrap;
-			align-items: flex-start;
-			.new-members {
-				border-right: 1px solid $color-border-default;
-			}
-	}
-	.recent-activity,
-	.new-members {
-		padding: $lg-gutter 0 $lg-gutter $lg-gutter;
-		width: 100%;
-		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: center);
-		
-		}
+	.member-date {
 	}
 }
-*/

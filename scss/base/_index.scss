@@ -28,11 +28,15 @@ section {
 }
 .two-col {
 	@include max-width;
-	@include flex($f-wrap: nowrap);
+	@media screen and (min-width: $br-med) {
+		@include flex($f-wrap: nowrap);
+	}
 	padding: $gutter 0;
 }
 .three-col {
 	@include max-width;
-	@include flex($f-wrap: nowrap);
+	@media screen and (min-width: $br-lg) {
+		@include flex($f-wrap: nowrap);
+	}
 	padding: $gutter 0;
 }

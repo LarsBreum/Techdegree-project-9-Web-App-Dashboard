@@ -50,18 +50,22 @@ section {
 .two-col {
   margin: 0 auto;
   max-width: 1024px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
   padding: 10px 0; }
+  @media screen and (min-width: 768px) {
+    .two-col {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; } }
 
 .three-col {
   margin: 0 auto;
   max-width: 1024px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
   padding: 10px 0; }
+  @media screen and (min-width: 1024px) {
+    .three-col {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; } }
 
 /************************
 ***** HEADER STYLES *****
@@ -272,30 +276,39 @@ main {
   justify-content: space-evenly; }
 
 .new-members, .recent-activity {
-  padding: 20px;
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .new-members, .recent-activity {
+      padding: 20px; } }
 
-.new-members {
-  border-right: 1px solid lightgrey; }
+@media screen and (min-width: 768px) {
+  .new-members {
+    border-right: 1px solid lightgrey; } }
 
 .member,
 .activity {
-  height: 100px;
+  padding: 10px 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 10px 0 10px 0; }
-  @media screen and (min-width: 1024px) {
+  border-bottom: 1px solid lightgrey; }
+  @media screen and (min-width: 768px) {
     .member,
     .activity {
-      border-bottom: 1px solid lightgrey; } }
+      height: 100px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 0 10px 0; } }
   .member .activity-info,
   .activity .activity-info {
     width: 100%; }
   .member .member-img,
   .activity .member-img {
-    width: 50px;
-    margin-right: 10px; }
+    width: 50px; }
+    @media screen and (min-width: 768px) {
+      .member .member-img,
+      .activity .member-img {
+        margin-right: 10px; } }
     .member .member-img img,
     .activity .member-img img {
       width: 100%; }
@@ -312,27 +325,6 @@ main {
   .activity .arrow {
     float: right; }
 
-/* section .section-container {
-	@include flex($f-dir: row);
-	padding: 0 $lg-gutter 0 $lg-gutter;
-	@include max-width;
-	@media screen and (min-width: $br-med) {
-			flex-flow: row nowrap;
-			align-items: flex-start;
-			.new-members {
-				border-right: 1px solid $color-border-default;
-			}
-	}
-	.recent-activity,
-	.new-members {
-		padding: $lg-gutter 0 $lg-gutter $lg-gutter;
-		width: 100%;
-		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: center);
-		
-		}
-	}
-}
-*/
 /******************************
 **** COMMUNICATION SECTION ****
 ******************************/
@@ -350,30 +342,29 @@ form {
   form button[type="reset"] {
     background: #9B9FFF; }
 
-@media screen and (min-width: 1024px) {
-  .communication {
-    /* @include flex($f-dir: row, $f-wrap: nowrap, $f-just: space-evenly); */ }
-    .communication .send-message {
-      flex-grow: 1;
-      flex-basis: 50%;
-      border-right: 1px solid lightgrey; }
-    .communication .settings {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-between;
-      flex-grow: 1;
-      flex-basis: 50%; }
-      .communication .settings button {
-        width: 44%;
-        display: inline-block; }
-      .communication .settings button[type="submit"] {
-        float: left;
-        margin-right: 3%; }
-      .communication .settings button[type="reset"] {
-        float: right;
-        margin-left: 3%; }
-      .communication .settings label {
-        line-height: 50px; } }
+@media screen and (min-width: 768px) {
+  .send-message {
+    flex-grow: 1;
+    flex-basis: 50%;
+    border-right: 1px solid lightgrey; }
+
+  .settings {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: 50%; }
+    .settings button {
+      width: 44%;
+      display: inline-block; }
+    .settings button[type="submit"] {
+      float: left;
+      margin-right: 3%; }
+    .settings button[type="reset"] {
+      float: right;
+      margin-left: 3%; }
+    .settings label {
+      line-height: 50px; } }
 /*****************************
 ******* FOOTER STYLES ********
 *****************************/
