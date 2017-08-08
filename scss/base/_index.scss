@@ -21,5 +21,15 @@ wrapper.flex {
 section {
 	border-bottom: 1px solid $color-border-default;
 	padding: 0 $lg-gutter;
-
 }
+/* .one-col {
+	@include max-width;
+}
+.two-col {
+	@include max-width;
+	@include flex($f-wrap: nowrap);
+}
+.three-col {
+	@include max-width;
+	@include flex($f-wrap: nowrap);
+} */

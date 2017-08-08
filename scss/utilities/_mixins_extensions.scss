@@ -14,6 +14,10 @@
 	justify-content: $f-just;
 	@content;
 }
+@mixin max-width {
+	margin: 0 auto;	
+	max-width: $br-lg;
+}
 
 
 //exentension
@@ -34,3 +38,4 @@
 	@include round-corners($br: 5px);
 	margin: $gutter/2 0;
 }
+

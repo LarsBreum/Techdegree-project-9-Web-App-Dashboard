@@ -43,48 +43,52 @@
 							<input type="search">
 						</ul>
 					</nav>
-					<section class="one-col">
-						<h3>Traffic</h3>
-						<nav class="graph-nav">
-							<ul>
-								<li><a>Hourly</a></li>
-								<li><a>Daily</a></li>
-								<li class="active"><a>Weekly</a></li>
-								<li><a>Monthly</a></li>
-							</ul>
-						</nav>
-							<div class="line-chart-holder hourly">
-								<canvas id="hourly-traffic"></canvas>
-							</div>
-							<div class="line-chart-holder daily">
-								<canvas id="daily-traffic"></canvas>
-							</div>
-							<div class="line-chart-holder weekly">
-								<canvas id="weekly-traffic"></canvas>
-							</div>
-							<div class="line-chart-holder monthly">
-								<canvas id="monthly-traffic"></canvas>
+					<section>
+						<div class="one-col">
+							<h3>Traffic</h3>
+							<nav class="graph-nav">
+								<ul>
+									<li><a>Hourly</a></li>
+									<li><a>Daily</a></li>
+									<li class="active"><a>Weekly</a></li>
+									<li><a>Monthly</a></li>
+								</ul>
+							</nav>
+								<div class="line-chart-holder hourly">
+									<canvas id="hourly-traffic"></canvas>
+								</div>
+								<div class="line-chart-holder daily">
+									<canvas id="daily-traffic"></canvas>
+								</div>
+								<div class="line-chart-holder weekly">
+									<canvas id="weekly-traffic"></canvas>
+								</div>
+								<div class="line-chart-holder monthly">
+									<canvas id="monthly-traffic"></canvas>
+								</div>
 							</div>
 					</section>
-					<section class="two-col">
-						<div class="left">
-							<h3>Daily traffic</h3>
-							<div class="bar-chart-holder">
-								<canvas id="daily-traffic-bar"></canvas>
+					<section>
+						<div class="two-col">
+							<div class="left">
+								<h3>Daily traffic</h3>
+								<div class="bar-chart-holder">
+									<canvas id="daily-traffic-bar"></canvas>
+								</div>
 							</div>
-						</div>
-						<div class="right">
-							<h3>Mobile users</h3>
-							<div class="donut-chart-holder">
-								<canvas id="mobile-users-donut"></canvas>
+							<div class="right">
+								<h3>Mobile users</h3>
+								<div class="donut-chart-holder">
+									<canvas id="mobile-users-donut"></canvas>
+								</div>
 							</div>
 						</div>
 					</section>
 					<section class="three-col social-stats">
-					<h3>Social Stats</h3>
 					<div class="social">
-						
-						<div class="card twitter">
+						<h3>Social Stats</h3>
+						<div class="card-holder">
+							<div class="card twitter">
 							<div class="img-container">
 								<?xml version="1.0" encoding="utf-8"?>
 								<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -140,129 +144,134 @@
 								<span class="visitor-num">11</span>
 							</div>
 						</div>
+						</div>
 					</div>
 					</section>
 					<section class="news">
-						<div class="new-members">
-							<h3>New members</h3>
-							<div class="member">
-								<div class="member-img">
-									<img src="img/member-avatars/vic-cham.jpg">
+						<div class="section-container news">
+							<div class="new-members">
+								<h3>New members</h3>
+								<div class="member">
+									<div class="member-img">
+										<img src="img/member-avatars/vic-cham.jpg">
+									</div>
+									<div class="member-info-container">
+										<span class="member-name">Victoria Chambers</span>
+										<span class="member-email">vic.chambers80@example.com</span>
+										<span class="member-date">10/15/15</span>
+									</div>
 								</div>
-								<div class="member-info-container">
-									<span class="member-name">Victoria Chambers</span>
-									<span class="member-email">vic.chambers80@example.com</span>
-									<span class="member-date">10/15/15</span>
+								<div class="member">
+									<div class="member-img">
+										<img src="img/member-avatars/bob.jpg">
+									</div>
+									<div class="member-info-container">
+										<span class="member-name">Robert Bobby</span>
+										<span class="member-email">Bobby.Bobby@example.com</span>
+										<span class="member-date">14/10/16</span>
+									</div>
 								</div>
-							</div>
-							<div class="member">
-								<div class="member-img">
-									<img src="img/member-avatars/bob.jpg">
+								<div class="member">
+									<div class="member-img">
+										<img src="img/member-avatars/rajesh.jpg">
+									</div>
+									<div class="member-info-container">
+										<span class="member-name">Rajesh Johnson</span>
+										<span class="member-email">RJ@example.com</span>
+										<span class="member-date">31/12/12</span>
+									</div>
 								</div>
-								<div class="member-info-container">
-									<span class="member-name">Robert Bobby</span>
-									<span class="member-email">Bobby.Bobby@example.com</span>
-									<span class="member-date">14/10/16</span>
-								</div>
-							</div>
-							<div class="member">
-								<div class="member-img">
-									<img src="img/member-avatars/rajesh.jpg">
-								</div>
-								<div class="member-info-container">
-									<span class="member-name">Rajesh Johnson</span>
-									<span class="member-email">RJ@example.com</span>
-									<span class="member-date">31/12/12</span>
-								</div>
-							</div>
-							<div class="member">
-								<div class="member-img">
-									<img src="img/member-avatars/lisa.jpg">
-								</div>
-								<div class="member-info-container">
-									<span class="member-name">Lisa Simmons</span>
-									<span class="member-email">ls@example.com</span>
-									<span class="member-date">10/13/11</span>
-								</div>
-							</div>
-						</div>
-						<div class="recent-activity">
-							<h3>Recent activity</h3>
-							<div class="activity">
-								<div class="member-img">
-									<img src="img/member-avatars/lisa.jpg">
-								</div>
-								<div class="activity-info">
-									<span class="member-name">Lisa Simmons </span><br><span>commented on Facebook</span><span class="arrow">Arw</span>
-									
-									<span class="time-passed">4 hours ago</span>
+								<div class="member">
+									<div class="member-img">
+										<img src="img/member-avatars/lisa.jpg">
+									</div>
+									<div class="member-info-container">
+										<span class="member-name">Lisa Simmons</span>
+										<span class="member-email">ls@example.com</span>
+										<span class="member-date">10/13/11</span>
+									</div>
 								</div>
 							</div>
-							<div class="activity">
-								<div class="member-img">
-									<img src="img/member-avatars/rajesh.jpg">
+							<div class="recent-activity">
+								<h3>Recent activity</h3>
+								<div class="activity">
+									<div class="member-img">
+										<img src="img/member-avatars/lisa.jpg">
+									</div>
+									<div class="activity-info">
+										<span class="member-name">Lisa Simmons </span><br><span>commented on Facebook</span><span class="arrow">Arw</span>
+										
+										<span class="time-passed">4 hours ago</span>
+									</div>
 								</div>
-								<div class="activity-info">
-									<span class="member-name">Rajesh Johnson </span><br><span>commented on your post</span>
-									<span class="arrow">Arw</span>
-									<span class="time-passed">6 hours ago</span>
+								<div class="activity">
+									<div class="member-img">
+										<img src="img/member-avatars/rajesh.jpg">
+									</div>
+									<div class="activity-info">
+										<span class="member-name">Rajesh Johnson </span><br><span>commented on your post</span>
+										<span class="arrow">Arw</span>
+										<span class="time-passed">6 hours ago</span>
+									</div>
+								</div>
+								<div class="activity">
+									<div class="member-img">
+										<img src="img/member-avatars/bob.jpg">
+									</div>
+									<div class="activity-info">
+										<span class="member-name">Robert Bobby </span><br><span>commented on your tweet</span>
+										<span class="arrow">Arw</span>
+										<span class="time-passed">10 hours ago</span>
+									</div>
+								</div>
+								<div class="activity">
+									<div class="member-img">
+										<img src="img/member-avatars/bob.jpg">
+									</div>
+									<div class="activity-info">
+										<span class="member-name">Robert Bobby </span><br><span>commented on your Post</span>
+										<span class="arrow">Arw</span>
+										<span class="time-passed">11 hours ago</span>
+									</div>
 								</div>
 							</div>
-							<div class="activity">
-								<div class="member-img">
-									<img src="img/member-avatars/bob.jpg">
-								</div>
-								<div class="activity-info">
-									<span class="member-name">Robert Bobby </span><br><span>commented on your tweet</span>
-									<span class="arrow">Arw</span>
-									<span class="time-passed">10 hours ago</span>
-								</div>
-							</div>
-							<div class="activity">
-								<div class="member-img">
-									<img src="img/member-avatars/bob.jpg">
-								</div>
-								<div class="activity-info">
-									<span class="member-name">Robert Bobby </span><br><span>commented on your Post</span>
-									<span class="arrow">Arw</span>
-									<span class="time-passed">11 hours ago</span>
+						</section>
+						<section class="communication">
+							<div class="two-col">
+							<div class="send-message">
+								<div class="message-form">
+									<form class="message">
+									<fieldset>
+										<legend>Message User
+										</legend>
+										<input type="text" placeholder="Search for user">
+										<textarea placeholder="Message for user"></textarea>
+										<button type="submit">Send Message</button>	
+									</fieldset>
+									</form>
 								</div>
 							</div>
-						</div>
-					</section>
-					<section class="communication">
-						<div class="send-message">
-							<div class="message-form">
-								<form class="message">
-								<fieldset>
-									<legend>Message User
-									</legend>
-									<input type="text" placeholder="Search for user">
-									<textarea placeholder="Message for user"></textarea>
-									<button type="submit">Send Message</button>	
-								</fieldset>
-								</form>
-							</div>
-						</div>
-						<div class="settings">
-							 <form>
-							 	<fieldset>
-							 		<legend>Settings</legend>
-							 		<div>
-								 		<label for="notifications">Send Email Notifications</label>
-								 		<input id="notifications" type="checkbox">
-								 		</div>
+							<div class="settings">
+								 <form>
+								 	<fieldset>
+								 		<legend>Settings</legend>
 								 		<div>
-							 		<label for="public">Set profile to public</label>
-							 		<input id="public" type="checkbox">
-							 	</div>
-							 	<input type="text" placeholder="Input timezone">
-							 	</fieldset>
-							 	<fieldset>
-								 	<button type="submit">Save</button>
-								 	<button type="reset">Cancel</button>
-							 	</fieldset>
-							 </form>
+									 		<label for="notifications">Send Email Notifications</label>
+									 		<input id="notifications" type="checkbox">
+									 		</div>
+									 		<div>
+								 		<label for="public">Set profile to public</label>
+								 		<input id="public" type="checkbox">
+								 	</div>
+								 	<input type="text" placeholder="Input timezone">
+								 	</fieldset>
+								 	<fieldset>
+									 	<button type="submit">Save</button>
+									 	<button type="reset">Cancel</button>
+								 	</fieldset>
+								 </form>
+							</div>
+						</div>
 						</div>
 					</section>
 				</main>

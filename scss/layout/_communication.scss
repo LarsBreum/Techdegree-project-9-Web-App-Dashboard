@@ -26,7 +26,7 @@ form {
 }
 @media screen and (min-width: 1024px) {
 	.communication {
-		@include flex($f-dir: row, $f-wrap: nowrap, $f-just: space-evenly);
+		/* @include flex($f-dir: row, $f-wrap: nowrap, $f-just: space-evenly); */
 		.send-message {
 			flex-grow: 1;
 			flex-basis: 50%;

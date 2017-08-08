@@ -2,9 +2,10 @@
 ** NEWS AND RECENT ACTIVITY SECTION **
 *************************************/
 
-section.news {
+section .section-container {
 	@include flex($f-dir: row);
 	padding: 0 $lg-gutter 0 $lg-gutter;
+	@include max-width;
 	@media screen and (min-width: $br-med) {
 			flex-flow: row nowrap;
 			align-items: flex-start;
@@ -12,9 +13,9 @@ section.news {
 				border-right: 1px solid $color-border-default;
 			}
 	}
-	.new-members,
-	.recent-activity {
-		padding: $lg-gutter;
+	.recent-activity,
+	.new-members {
+		padding: $lg-gutter 0 $lg-gutter $lg-gutter;
 		width: 100%;
 		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: center);
 		.member,

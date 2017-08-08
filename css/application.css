@@ -42,6 +42,17 @@ section {
   border-bottom: 1px solid lightgrey;
   padding: 0 20px; }
 
+/* .one-col {
+	@include max-width;
+}
+.two-col {
+	@include max-width;
+	@include flex($f-wrap: nowrap);
+}
+.three-col {
+	@include max-width;
+	@include flex($f-wrap: nowrap);
+} */
 /************************
 ***** HEADER STYLES *****
 ************************/
@@ -188,6 +199,7 @@ main {
   margin: 0 auto; }
 
 .line-chart-holder {
+  margin: 0 auto;
   width: 100%;
   padding-bottom: 20px; }
 
@@ -222,12 +234,17 @@ main {
   font-size: 1.3em; }
 
 .social {
+  margin: 0 auto;
+  max-width: 1024px; }
+
+.card-holder {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  justify-content: space-around;
   width: 100%;
   padding: 20px 0; }
   @media screen and (min-width: 768px) {
-    .social {
+    .card-holder {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between; } }
@@ -236,50 +253,61 @@ main {
   width: 50px; }
 
 .one-col {
-  width: 100%; }
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1024px; }
+  .one-col nav {
+    text-align: center; }
 
 @media screen and (min-width: 768px) {
   .two-col {
     display: flex;
-    flex-flow: row nowrap; }
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1024px; }
     .two-col .left {
-      flex-grow: 1; }
+      flex-grow: 1;
+      margin-right: 10px; }
     .two-col .right {
-      flex-grow: 1; } }
+      flex-grow: 1;
+      margin-left: 10px; } }
 /*************************************
 ** NEWS AND RECENT ACTIVITY SECTION **
 *************************************/
-section.news {
+section .section-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding: 0 20px 0 20px; }
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+  max-width: 1024px; }
   @media screen and (min-width: 768px) {
-    section.news {
+    section .section-container {
       flex-flow: row nowrap;
       align-items: flex-start; }
-      section.news .new-members {
+      section .section-container .new-members {
         border-right: 1px solid lightgrey; } }
-  section.news .new-members,
-  section.news .recent-activity {
-    padding: 20px;
+  section .section-container .recent-activity,
+  section .section-container .new-members {
+    padding: 20px 0 20px 20px;
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center; }
-    section.news .new-members .member,
-    section.news .new-members .activity,
-    section.news .recent-activity .member,
-    section.news .recent-activity .activity {
+    section .section-container .recent-activity .member,
+    section .section-container .recent-activity .activity,
+    section .section-container .new-members .member,
+    section .section-container .new-members .activity {
       width: 100%;
       display: flex;
       align-items: center;
       padding: 10px 0 10px 0; }
       @media screen and (min-width: 1024px) {
-        section.news .new-members .member,
-        section.news .new-members .activity,
-        section.news .recent-activity .member,
-        section.news .recent-activity .activity {
+        section .section-container .recent-activity .member,
+        section .section-container .recent-activity .activity,
+        section .section-container .new-members .member,
+        section .section-container .new-members .activity {
           border-bottom: 1px solid lightgrey; } }
 
 .time-passed {
@@ -324,9 +352,7 @@ form {
 
 @media screen and (min-width: 1024px) {
   .communication {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly; }
+    /* @include flex($f-dir: row, $f-wrap: nowrap, $f-just: space-evenly); */ }
     .communication .send-message {
       flex-grow: 1;
       flex-basis: 50%;

@@ -25,6 +25,7 @@ main {
   }
 }
 .line-chart-holder {
+  margin: 0 auto;
   width: 100%;
   padding-bottom: $lg-gutter;
 }
@@ -58,8 +59,10 @@ main {
   font-size: 1.3em;
 }
 .social {
-  display: flex;
-  flex-direction: column;
+  @include max-width;
+}
+.card-holder {
+  @include flex ($f-dir: column);
   width: 100%;
   padding: $lg-gutter 0;
   @media screen and (min-width: 768px) {
@@ -71,17 +74,25 @@ main {
   width: 50px;
 }
 .one-col {
-  width: 100%;
+  text-align: left;
+  @include max-width;
+  nav {
+    text-align: center;
+  }   
 }
 @media screen and (min-width: 768px) {
   .two-col {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    @include max-width;
     .left {
       flex-grow: 1;
+      margin-right: $gutter;
     }
     .right {
       flex-grow: 1;
+      margin-left: $gutter;
     }
   }
 }
