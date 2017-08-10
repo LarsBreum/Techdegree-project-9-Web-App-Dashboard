@@ -40,3 +40,6 @@ section {
 	}
 	padding: $gutter 0;
 }
+button {
+	@extend %btn-basic;
+}

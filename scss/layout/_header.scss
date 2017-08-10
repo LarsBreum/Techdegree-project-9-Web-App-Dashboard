@@ -5,7 +5,7 @@
 header {
 	margin: 0;
 	background: $color-brand-bg;
-	color: #fff;
+	color: $color-font-default;
 	@include flex ($f-just: space-between, $f-dir: column);
 	@media screen and (min-width: 768px) {
 		flex-direction: row;
@@ -38,6 +38,9 @@ header {
 		@include img-container;
 	}
 	.bell {
+		path {
+			fill: $color-font-default;
+		}
 		@media screen and (min-width: 768px) {
 			border-right: 1px solid lightblue;
 			width: 42px;
@@ -58,9 +61,4 @@ header {
 	* {
 		margin: 0 $gutter;
 	}
-}
-
-
-svg.bell {
-	color: white;
 }

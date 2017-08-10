@@ -8,6 +8,28 @@ main {
     flex-basis: 100%;
   }
 }
+.alert {
+  text-align: center;
+  background: $color-brand-bg;
+  padding: $gutter 0;
+  color: $color-font-default;
+  @include max-width;
+  margin: $lg-gutter auto;
+  @include round-corners(5px);
+  @include flex($f-wrap: nowrap, $f-just: space-between);
+  align-items: center;
+  span {
+    margin: 0 $lg-gutter;
+  }
+  span:nth-child(1),
+  span:nth-child(3) {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  span:nth-child(3) {
+    cursor: pointer;
+  }
+}
 .social-stats h3 {
   margin-bottom: 2px;
 }
@@ -36,7 +58,8 @@ main {
 }
 
 .card {
-  background: lightgrey;
+  border: 2px solid $color-brand-bg;
+  background: #efefef;
   padding: $lg-gutter;
   @include round-corners($br: 5px);
   @include flex($f-wrap: nowrap, $f-just: space-around);
@@ -52,6 +75,13 @@ main {
   }
   .card-text-holder {
       width: 50px;
+  }
+  .img-container {
+    svg {
+      path {
+        fill: $color-brand-bg;
+      }
+    }
   }
 }
 .visitor-num {

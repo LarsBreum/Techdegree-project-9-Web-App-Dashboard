@@ -18,22 +18,13 @@ function showHourly() {
 	            label: 'Visitors',
 	            data: [0, 0, 0, 0, 10, 50, 50, 70, 20, 100, 20, 24, 11, 50, 11, 15, 40, 120, 10, 111, 102, 40, 23, 25, 11, 0],
 	            backgroundColor: [
-	                'rgba(255, 99, 132, 0.2)',
-	                'rgba(54, 162, 235, 0.2)',
-	                'rgba(255, 206, 86, 0.2)',
-	                'rgba(75, 192, 192, 0.2)',
-	                'rgba(153, 102, 255, 0.2)',
-	                'rgba(255, 159, 64, 0.2)'
+	                'rgba(148,151,206,0.2)'
 	            ],
 	            borderColor: [
-	                'rgba(255,99,132,1)',
-	                'rgba(54, 162, 235, 1)',
-	                'rgba(255, 206, 86, 1)',
-	                'rgba(75, 192, 192, 1)',
-	                'rgba(153, 102, 255, 1)',
-	                'rgba(255, 159, 64, 1)'
+	                'rgba(148,151,206,1)'
 	            ],
-	            borderWidth: 1
+	            borderWidth: 1,
+	            lineTension: 0
 	        }]
 	    },
 	    options: {
@@ -59,22 +50,13 @@ function showDaily () {
 	            label: 'Visitors',
 	            data: [0, 100, 150, 80, 300, 200, 20],
 	            backgroundColor: [
-	                'rgba(255, 99, 132, 0.2)',
-	                'rgba(54, 162, 235, 0.2)',
-	                'rgba(255, 206, 86, 0.2)',
-	                'rgba(75, 192, 192, 0.2)',
-	                'rgba(153, 102, 255, 0.2)',
-	                'rgba(255, 159, 64, 0.2)'
+	                'rgba(148,151,206,0.2)'
 	            ],
 	            borderColor: [
-	                'rgba(255,99,132,1)',
-	                'rgba(54, 162, 235, 1)',
-	                'rgba(255, 206, 86, 1)',
-	                'rgba(75, 192, 192, 1)',
-	                'rgba(153, 102, 255, 1)',
-	                'rgba(255, 159, 64, 1)'
+	                'rgba(148,151,206,1)'
 	            ],
-	            borderWidth: 1
+	            borderWidth: 1,
+	            lineTension: 0
 	        }]
 	    },
 	    options: {
@@ -100,22 +82,13 @@ function showWeekly () {
 	            label: 'Visitors',
 	            data: [0, 500, 1250, 800, 1800, 1900, 2000, 2500, 2600, 2400, 2500],
 	            backgroundColor: [
-	                'rgba(255, 99, 132, 0.2)',
-	                'rgba(54, 162, 235, 0.2)',
-	                'rgba(255, 206, 86, 0.2)',
-	                'rgba(75, 192, 192, 0.2)',
-	                'rgba(153, 102, 255, 0.2)',
-	                'rgba(255, 159, 64, 0.2)'
+	                'rgba(148,151,206,0.2)'
 	            ],
 	            borderColor: [
-	                'rgba(255,99,132,1)',
-	                'rgba(54, 162, 235, 1)',
-	                'rgba(255, 206, 86, 1)',
-	                'rgba(75, 192, 192, 1)',
-	                'rgba(153, 102, 255, 1)',
-	                'rgba(255, 159, 64, 1)'
+	                'rgba(148,151,206,1)'
 	            ],
-	            borderWidth: 1
+	            borderWidth: 1,
+	            lineTension: 0
 	        }]
 	    },
 	    options: {
@@ -141,22 +114,13 @@ function showMonthly () {
 	            label: 'Visitors',
 	            data: [8000, 8330, 8440, 8320, 9490, 9944, 8300, 8500, 9340, 8284, 9944, 9934],
 	            backgroundColor: [
-	                'rgba(255, 99, 132, 0.2)',
-	                'rgba(54, 162, 235, 0.2)',
-	                'rgba(255, 206, 86, 0.2)',
-	                'rgba(75, 192, 192, 0.2)',
-	                'rgba(153, 102, 255, 0.2)',
-	                'rgba(255, 159, 64, 0.2)'
+	                'rgba(148,151,206,0.2)'
 	            ],
 	            borderColor: [
-	                'rgba(255,99,132,1)',
-	                'rgba(54, 162, 235, 1)',
-	                'rgba(255, 206, 86, 1)',
-	                'rgba(75, 192, 192, 1)',
-	                'rgba(153, 102, 255, 1)',
-	                'rgba(255, 159, 64, 1)'
+	                'rgba(148,151,206,1)'
 	            ],
-	            borderWidth: 1
+	            borderWidth: 1,
+	            lineTension: 0
 	        }]
 	    },
 	    options: {
@@ -219,13 +183,13 @@ function findGraph (SelectedOption) {
  			label: 'Visitors',
  			data: [100, 158, 302, 284, 192, 485, 103],
  			backgroundColor: [
- 				'#7477bf',
- 				'#7477bf',
- 				'#7477bf',
- 				'#7477bf',
- 				'#7477bf',
- 				'#7477bf',
- 				'#7477bf'
+ 				'rgba(115,119,191,1)',
+ 				'rgba(115,119,191,1)',
+ 				'rgba(115,119,191,1)',
+ 				'rgba(115,119,191,1)',
+ 				'rgba(115,119,191,1)',
+ 				'rgba(115,119,191,1)',
+ 				'rgba(115,119,191,1)'
  			],
  			options: {
  				scales: {
@@ -256,7 +220,7 @@ let mobileUsersDonutChart = new Chart(
  				'#7477bf',
  				'tomato',
  				'green',
- 				'orange'
+ 				'#ffa500'
  			],
  		}]
  	}

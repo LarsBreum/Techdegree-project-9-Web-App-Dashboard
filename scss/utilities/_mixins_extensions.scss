@@ -20,7 +20,7 @@
 }
 
 
-//exentension
+//extensions
 //input extensions
 %input-basic {
 	padding: 5px;
@@ -31,11 +31,25 @@
 	width: 100%;
 }
 %btn-basic {
+	transition: background .2s ease-out, color .2s ease-out;
 	border: none;
-	background: $color-brand-bg;
 	width: 100%;
 	padding: 15px 10px;
+	cursor: pointer;
+	color: #fefefe;
+	font-weight: bold;
 	@include round-corners($br: 5px);
 	margin: $gutter/2 0;
 }
+%btn-cta {
+	background: #ffa500;
+	color: #020202;
+}
 
+%active-nav {
+	path {
+		fill: #fefefe;
+		opacity: 1;
+	}
+	border-left: 2px solid #85db80;
+}

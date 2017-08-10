@@ -21,11 +21,15 @@ aside ul li {
 	margin: 10px 0;
 	list-style-type: none;
 	flex-grow: 1;
-	padding: 0 10px;
-	max-width: 50px;
-	color: grey;
+	padding: 15px;
+	width: 100%;
+	path {
+		fill: $color-font-default;
+		opacity: 0.5;
+	}
 }
 .active-nav {
+	@extend %active-nav;
 }
 svg {
 	width: 100%;

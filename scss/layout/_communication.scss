@@ -17,11 +17,14 @@ form {
 		margin-bottom: $gutter;
 		min-height: 100px;
 	}
-	button {
-		@extend %btn-basic;
+	button[type="submit"] {
+		background: $color-brand-bg;
+		&:hover {
+			@extend %btn-cta;
+		}
 	}
 	button[type="reset"] {
-		background: $color-accent-bg;
+		background: $color-silent;
 	}
 }
 @media screen and (min-width: $br-med) {
