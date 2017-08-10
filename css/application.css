@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway");
-form input[type="text"], form textarea {
+.main-nav ul input[type="search"], form input[type="text"], form textarea {
   padding: 5px;
   outline: none;
   background: #eee;
@@ -85,6 +85,12 @@ section {
       flex-flow: row nowrap;
       justify-content: space-between; } }
 
+h3,
+legend {
+  text-transform: uppercase;
+  color: #4d4c72;
+  font-weight: bold; }
+
 /************************
 ***** HEADER STYLES *****
 ************************/
@@ -148,11 +154,10 @@ header {
     margin: 0 10px; }
 
 .main-nav {
-  background: #cecece;
-  padding: 0; }
+  background: #cecece; }
   @media screen and (min-width: 768px) {
     .main-nav {
-      padding: 0 20px 0 0; } }
+      padding: 0 20px; } }
   .main-nav ul {
     list-style-type: none;
     display: flex;
@@ -161,19 +166,25 @@ header {
     margin: 0;
     height: 50px;
     padding: 0;
-    width: 100%; }
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1024px; }
     .main-nav ul li {
       padding: 10px 10px 10px 0;
       background: #fefefe;
       align-self: flex-end;
       height: 50px;
       line-height: 30px;
-      padding-left: 10px; }
+      padding-left: 10px;
+      font-weight: bold; }
     .main-nav ul span {
       vertical-align: middle; }
     .main-nav ul input {
       height: 30px;
       align-self: center; }
+    .main-nav ul input[type="search"] {
+      width: auto;
+      background: #fefefe; }
 
 /***********************
 **** SIDEBAR STYLES ****
@@ -225,7 +236,7 @@ main {
   color: #fbfbfb;
   margin: 0 auto;
   max-width: 1024px;
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
   border-radius: 5px;
   width: 100%;
   display: flex;

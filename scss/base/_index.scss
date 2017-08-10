@@ -43,3 +43,9 @@ section {
 button {
 	@extend %btn-basic;
 }
+h3,
+legend {
+	text-transform: uppercase;
+	color: $color-accent-bg;
+	font-weight: bold;
+}

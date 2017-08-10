@@ -14,7 +14,7 @@ main {
   padding: $gutter 0;
   color: $color-font-default;
   @include max-width;
-  margin: $lg-gutter auto;
+  margin: $lg-gutter auto 0 auto;
   @include round-corners(5px);
   @include flex($f-wrap: nowrap, $f-just: space-between);
   align-items: center;
