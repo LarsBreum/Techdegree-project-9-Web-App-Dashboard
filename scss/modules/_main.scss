@@ -76,13 +76,10 @@ main {
       width: 100px;
   }
   .img-container {
-    svg {
-      background: $color-accent-bg;
-      border-radius: 100%;
-      padding: 10px;
-      path {
-        fill: $color-main-bg;
-      }
+    width: 100px;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
