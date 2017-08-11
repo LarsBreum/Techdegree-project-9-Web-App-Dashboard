@@ -23,6 +23,9 @@ aside ul li {
 	flex-grow: 1;
 	padding: 15px;
 	width: 100%;
+	&:hover {
+		@extend %active-nav;
+	}
 	path {
 		fill: $color-font-default;
 		opacity: 0.5;
