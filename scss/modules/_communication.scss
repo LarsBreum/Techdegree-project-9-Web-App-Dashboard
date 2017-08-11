@@ -6,8 +6,10 @@ fieldset {
 }
 
 form {
+	select {
+		@extend %input-basic;
+	}
 	margin-top: $gutter;
-	border-bottom: 1px solid $color-border-default;
 	input[type="text"] {
 		@extend %input-basic;
 		margin: $gutter 0;
@@ -31,7 +33,7 @@ form {
 		border: 1px solid $color-brand-bg;
 		text-align: center;
 		border-radius: 5px;
-		@include max-width;
+		@include max-width;	
 		p {
 			font-weight: bold;
 		}
@@ -48,11 +50,13 @@ form {
 		flex-grow: 1;
 		flex-basis: 50%;
 		border-right: 1px solid $color-border-default;
+		max-width: 50%;
 	}
 	.settings {
 		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: space-between);
 		flex-grow: 1;
 		flex-basis: 50%;
+		max-width: 50%;
 		button {
 			width: 44%;
 			display: inline-block;

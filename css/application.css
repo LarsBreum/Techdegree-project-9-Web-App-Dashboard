@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway");
-.main-nav ul input[type="search"], form input[type="text"], form textarea {
+.main-nav ul input[type="search"], form select, form input[type="text"], form textarea {
   padding: 5px;
   outline: none;
   background: #eee;
@@ -399,8 +399,7 @@ fieldset {
   border: none; }
 
 form {
-  margin-top: 10px;
-  border-bottom: 1px solid lightgrey; }
+  margin-top: 10px; }
   form input[type="text"] {
     margin: 10px 0; }
   form textarea {
@@ -428,14 +427,16 @@ form {
   .send-message {
     flex-grow: 1;
     flex-basis: 50%;
-    border-right: 1px solid lightgrey; }
+    border-right: 1px solid lightgrey;
+    max-width: 50%; }
 
   .settings {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     flex-grow: 1;
-    flex-basis: 50%; }
+    flex-basis: 50%;
+    max-width: 50%; }
     .settings button {
       width: 44%;
       display: inline-block; }
