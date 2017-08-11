@@ -255,10 +255,9 @@ main {
   align-items: center; }
   .alert span {
     margin: 0 20px; }
-  .alert span:nth-child(3) {
+  .alert span:nth-child(2) {
     font-weight: bold;
-    font-size: 1.2em; }
-  .alert span:nth-child(3) {
+    font-size: 1.2em;
     cursor: pointer; }
 
 .social-stats h3 {

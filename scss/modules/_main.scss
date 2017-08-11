@@ -21,11 +21,9 @@ main {
   span {
     margin: 0 $lg-gutter;
   }
-  span:nth-child(3) {
+  span:nth-child(2) {
     font-weight: bold;
     font-size: 1.2em;
-  }
-  span:nth-child(3) {
     cursor: pointer;
   }
 }
