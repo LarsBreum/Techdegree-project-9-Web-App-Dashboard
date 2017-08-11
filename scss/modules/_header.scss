@@ -38,6 +38,7 @@ header {
 		@include img-container;
 	}
 	.bell {
+		position: relative;
 		path {
 			fill: $color-font-default;
 		}
@@ -46,13 +47,14 @@ header {
 			width: 42px;
 			padding-right: 10px;
 		}
-		&::before {
-			content: "";
-			@include round-corners(50%);
-			padding: 0px 9px;
-			background: green;
-			display: absolute;
-		}
+	}
+	.not-icon {
+		position: absolute;
+	    top: -4px;
+	    width: 8px;
+	    height: 8px;
+	    border-radius: 50%;
+	    background: rgb(129, 201, 143);
 	}
 }
 .member-img {
