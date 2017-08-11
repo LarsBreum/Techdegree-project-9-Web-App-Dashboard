@@ -59,7 +59,7 @@ main {
 
 .card {
   border: 2px solid $color-brand-bg;
-  background: #efefef;
+  background: $color-main-bg;
   padding: $lg-gutter;
   @include round-corners($br: 5px);
   @include flex($f-wrap: nowrap, $f-just: space-around);
