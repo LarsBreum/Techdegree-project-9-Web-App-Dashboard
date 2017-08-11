@@ -74,32 +74,34 @@ main {
       margin: 0;
   }
   .card-text-holder {
-      width: 50px;
+      width: 100px;
   }
   .img-container {
     svg {
+      background: $color-accent-bg;
+      border-radius: 100%;
+      padding: 10px;
       path {
-        fill: $color-brand-bg;
+        fill: $color-main-bg;
       }
     }
   }
 }
 .visitor-num {
-  font-weight: bold;
-  font-size: 1.3em;
+  font-size: 2em;
 }
 .social {
    @include max-width;
+  svg {
+    width: 100px;
+    height: 100px
+  }
 }
 .card-holder {
   @include flex ($f-dir: column);
   width: 100%;
   padding: $lg-gutter 0;
-}
-
-.social svg {
-  width: 50px;
-}
+} 
 
 @media screen and (min-width: 768px) {
   .left {

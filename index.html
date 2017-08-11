@@ -246,13 +246,19 @@
 							<div class="two-col">
 							<div class="send-message">
 								<div class="message-form">
-									<form class="message">
+									<form action="index.html" class="message" method="post">
 									<fieldset>
 										<legend>Message User
 										</legend>
-										<input type="text" placeholder="Search for user">
-										<textarea placeholder="Message for user"></textarea>
-										<button type="submit">Send Message</button>	
+										<input class="search-user" type="text" placeholder="Search for user">
+										<textarea class="message-user" placeholder="Message for user"></textarea>
+										<button type="submit">Send Message</button>
+										<div class="message wrong">
+											<p>You need to fill out both name and message</p>
+										</div>	
+										<div class="message right">
+											<p>Message sent</p>
+										</div>	
 									</fieldset>
 									</form>
 								</div>

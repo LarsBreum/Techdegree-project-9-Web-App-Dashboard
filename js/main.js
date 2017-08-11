@@ -234,3 +234,28 @@ const closer = $('.closer');
 banner.click(() => {
 	banner.slideUp();
 });
+
+/********************************
+************ MESSAGES ***********
+********************************/
+//Get the user field
+const user_field = $('.search-user');
+//get the textarea
+const user_message = $('.message-user');
+//get the form element
+const message_form = $('.message');
+//get the right and wrong messages
+const right_message = $('.right');
+const wrong_message = $('.wrong');
+
+message_form.submit((e) => {
+	if (user_field.val() === "" ||user_message.val() == "") {
+		wrong_message.show();
+		//stop form submit
+		e.preventDefault();
+	} else {
+		wrong_message.slideUp();
+		right_message.show();
+		e.preventDefault();
+	}
+})

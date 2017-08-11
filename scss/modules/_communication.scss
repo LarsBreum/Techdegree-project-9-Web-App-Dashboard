@@ -26,6 +26,22 @@ form {
 	button[type="reset"] {
 		background: $color-silent;
 	}
+	.message {
+		display: none;
+		border: 1px solid $color-brand-bg;
+		text-align: center;
+		border-radius: 5px;
+		@include max-width;
+		p {
+			font-weight: bold;
+		}
+	}
+	.wrong {
+		background: red;
+	}
+	.right {
+		background: green;
+	}
 }
 @media screen and (min-width: $br-med) {
 	.send-message {

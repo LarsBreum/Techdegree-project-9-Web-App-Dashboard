@@ -302,17 +302,23 @@ main {
   .card h3 {
     margin: 0; }
   .card .card-text-holder {
-    width: 50px; }
-  .card .img-container svg path {
-    fill: #7477bf; }
+    width: 100px; }
+  .card .img-container svg {
+    background: #4d4c72;
+    border-radius: 100%;
+    padding: 10px; }
+    .card .img-container svg path {
+      fill: #fefefe; }
 
 .visitor-num {
-  font-weight: bold;
-  font-size: 1.3em; }
+  font-size: 2em; }
 
 .social {
   margin: 0 auto;
   max-width: 1024px; }
+  .social svg {
+    width: 100px;
+    height: 100px; }
 
 .card-holder {
   display: flex;
@@ -320,9 +326,6 @@ main {
   justify-content: space-between;
   width: 100%;
   padding: 20px 0; }
-
-.social svg {
-  width: 50px; }
 
 @media screen and (min-width: 768px) {
   .left {
@@ -407,6 +410,19 @@ form {
     background: #7477bf; }
   form button[type="reset"] {
     background: #b2b2b2; }
+  form .message {
+    display: none;
+    border: 1px solid #7477bf;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 1024px; }
+    form .message p {
+      font-weight: bold; }
+  form .wrong {
+    background: red; }
+  form .right {
+    background: green; }
 
 @media screen and (min-width: 768px) {
   .send-message {
