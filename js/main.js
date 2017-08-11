@@ -225,3 +225,12 @@ let mobileUsersDonutChart = new Chart(
  		}]
  	}
  });
+
+/*********************************
+********** NOTIFICATIONS *********
+*********************************/
+const banner = $('.alert');
+const closer = $('.closer');
+banner.click(() => {
+	banner.slideUp();
+});
