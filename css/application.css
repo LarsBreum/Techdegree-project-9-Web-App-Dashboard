@@ -137,6 +137,13 @@ header {
       border-right: 1px solid lightblue;
       width: 42px;
       padding-right: 10px; } }
+  .profile-info .bell::before {
+    content: "";
+    border-radius: 50%;
+    width: 100%;
+    padding: 0px 9px;
+    background: green;
+    display: absolute; }
 
 .member-img {
   width: 32px;

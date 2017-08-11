@@ -46,6 +46,13 @@ header {
 			width: 42px;
 			padding-right: 10px;
 		}
+		&::before {
+			content: "";
+			@include round-corners(50%);
+			padding: 0px 9px;
+			background: green;
+			display: absolute;
+		}
 	}
 }
 .member-img {
