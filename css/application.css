@@ -423,6 +423,12 @@ form {
   form .right {
     background: green; }
 
+.settings div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center; }
+
 @media screen and (min-width: 768px) {
   .send-message {
     flex-grow: 1;
@@ -436,7 +442,8 @@ form {
     justify-content: space-between;
     flex-grow: 1;
     flex-basis: 50%;
-    max-width: 50%; }
+    max-width: 50%;
+    align-items: stretch; }
     .settings button {
       width: 44%;
       display: inline-block; }
@@ -448,6 +455,53 @@ form {
       margin-left: 3%; }
     .settings label {
       line-height: 50px; } }
+/*SLIDER TAKEN FROM W3 SCHOOLS*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px; }
+  .switch input {
+    display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s; }
+
+input:checked + .slider {
+  background-color: #4d4c72; }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; }
+  .slider.round:before {
+    border-radius: 50%; }
+
 /*****************************
 ******* FOOTER STYLES ********
 *****************************/

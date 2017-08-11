@@ -269,12 +269,17 @@
 								 		<legend>Settings</legend>
 								 		<div>
 									 		<label for="notifications">Send Email Notifications</label>
-									 		<input id="notifications" type="checkbox">
+									 		<label class="switch">
+											  <input id="notifications" type="checkbox">
+											  <span class="slider round"></span>
+											</label>
 									 		</div>
 									 		<div>
 								 		<label for="public">Set profile to public</label>
-								 		<input id="public" type="checkbox">
-								 	</div>
+								 		<label class="switch">
+ 									 <input id="public" type="checkbox">
+  									<span class="slider round"></span>
+										</label>
 								 	<select>
 	<option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
 	<option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
@@ -359,9 +364,6 @@
 	<option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
 	<option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
 </select>											
-				
-								 	</fieldset>
-								 	<fieldset>
 									 	<button type="submit">Save</button>
 									 	<button type="reset">Cancel</button>
 								 	</fieldset>
