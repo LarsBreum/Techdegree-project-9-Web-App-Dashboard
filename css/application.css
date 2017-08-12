@@ -403,7 +403,6 @@ form {
   form input[type="text"] {
     margin: 10px 0; }
   form textarea {
-    margin-bottom: 10px;
     min-height: 100px; }
   form button[type="submit"] {
     background: #7477bf; }
@@ -423,22 +422,35 @@ form {
   form .right {
     background: green; }
 
-.settings div {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center; }
+.settings {
+  padding: 20px; }
+  .settings div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; }
+  .settings form fieldset {
+    padding: 0; }
+  .settings button {
+    margin: 10px 0 0 0; }
 
 @media screen and (min-width: 768px) {
   .send-message {
     flex-grow: 1;
     flex-basis: 50%;
     border-right: 1px solid lightgrey;
-    max-width: 50%; }
+    max-width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    .send-message form fieldset {
+      margin: 0;
+      padding: 0; }
 
   .settings {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     flex-grow: 1;
     flex-basis: 50%;

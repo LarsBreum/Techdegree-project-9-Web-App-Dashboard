@@ -16,7 +16,6 @@ form {
 	}
 	textarea {
 		@extend %input-basic;
-		margin-bottom: $gutter;
 		min-height: 100px;
 	}
 	button[type="submit"] {
@@ -46,9 +45,18 @@ form {
 	}
 }
 .settings {
+	padding: $lg-gutter;
 	div {
 		@include flex ();
 		align-items: center;
+	}
+	form {
+		fieldset {
+			padding: 0;
+		}
+	}
+	button {
+		margin: $gutter 0 0 0;
 	}
 }
 @media screen and (min-width: $br-med) {
@@ -57,9 +65,17 @@ form {
 		flex-basis: 50%;
 		border-right: 1px solid $color-border-default;
 		max-width: 50%;
+		padding: $lg-gutter;
+		@include flex();
+		form {
+			fieldset {
+				margin: 0;
+				padding: 0;
+			}
+		}
 	}
 	.settings {
-		@include flex ($f-dir: column, $f-wrap: nowrap, $f-just: space-between);
+		@include flex ();
 		flex-grow: 1;
 		flex-basis: 50%;
 		max-width: 50%;
