@@ -3,7 +3,7 @@
 	@media screen and (min-width: $br-med) {
 		padding: 0 20px;
 	}
-	ul {
+	div {
 		list-style-type: none;
 		@include flex ($f-just: space-between);
 		margin: 0;
@@ -11,7 +11,7 @@
 		padding: 0;
 		width: 100%;
 		@include max-width;
-		li {	
+		span {	
 			padding: 10px 10px 10px 0;
 			background: $color-main-bg;
 			align-self: flex-end;

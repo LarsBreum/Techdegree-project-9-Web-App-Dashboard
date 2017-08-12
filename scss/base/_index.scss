@@ -8,10 +8,10 @@ body {
 	font-size: 1em;
 	font-family: Raleway;
 }
-wrapper {
+.wrapper {
 	width: 100%;	
 }
-wrapper.flex {
+.flex {
 	@include flex ($f-dir: column, $f-wrap: nowrap);
 	@media screen and (min-width: 768px) {
 		flex-flow: row nowrap;

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway");
-.main-nav ul input[type="search"], form select, form input[type="text"], form textarea {
+.main-nav div input[type="search"], form select, form input[type="text"], form textarea {
   padding: 5px;
   outline: none;
   background: #eee;
@@ -44,15 +44,15 @@ body {
   font-size: 1em;
   font-family: Raleway; }
 
-wrapper {
+.wrapper {
   width: 100%; }
 
-wrapper.flex {
+.flex {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between; }
   @media screen and (min-width: 768px) {
-    wrapper.flex {
+    .flex {
       flex-flow: row nowrap;
       justify-content: flex-start; } }
 
@@ -168,7 +168,7 @@ header {
   @media screen and (min-width: 768px) {
     .main-nav {
       padding: 0 20px; } }
-  .main-nav ul {
+  .main-nav div {
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
@@ -179,7 +179,7 @@ header {
     width: 100%;
     margin: 0 auto;
     max-width: 1024px; }
-    .main-nav ul li {
+    .main-nav div span {
       padding: 10px 10px 10px 0;
       background: #fefefe;
       align-self: flex-end;
@@ -187,12 +187,12 @@ header {
       line-height: 30px;
       padding-left: 10px;
       font-weight: bold; }
-    .main-nav ul span {
+    .main-nav div span {
       vertical-align: middle; }
-    .main-nav ul input {
+    .main-nav div input {
       height: 30px;
       align-self: center; }
-    .main-nav ul input[type="search"] {
+    .main-nav div input[type="search"] {
       width: auto;
       background: #fefefe; }
 
