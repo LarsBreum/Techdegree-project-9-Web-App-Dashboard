@@ -206,14 +206,13 @@ aside {
 aside nav ul {
   height: 100%;
   display: flex;
-  flex-flow: column no-wrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   padding: 0; }
   @media screen and (min-width: 768px) {
     aside nav ul {
       flex-direction: column;
       align-items: center;
-      justify-content: space-evenly;
       width: 68px; } }
 
 aside ul li {
@@ -339,9 +338,6 @@ main {
 /*************************************
 ** NEWS AND RECENT ACTIVITY SECTION **
 *************************************/
-.news {
-  justify-content: space-evenly; }
-
 .new-members, .recent-activity {
   width: 100%; }
   @media screen and (min-width: 768px) {

@@ -8,12 +8,11 @@ aside {
 }
 aside nav ul {
 	height: 100%;
-	@include flex ($f-just: space-around, $f-dir: column, $f-wrap: no-wrap);
+	@include flex ($f-just: space-around, $f-dir: column, $f-wrap: nowrap);
 	padding: 0;
 	@media screen and (min-width: 768px) {
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-evenly;
 		width: 68px;
 	}
 }
