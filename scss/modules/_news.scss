@@ -54,7 +54,11 @@
 		display: block;
 	}
 	.arrow {
+		@include img-container;
 		float: right;
+		img {
+			max-width: 32px;
+		}
 	}
 	.member-date {
 	}

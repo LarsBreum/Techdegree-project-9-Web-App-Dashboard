@@ -390,7 +390,11 @@ main {
     display: block; }
   .member .arrow,
   .activity .arrow {
+    width: 32px;
     float: right; }
+    .member .arrow img,
+    .activity .arrow img {
+      max-width: 32px; }
 
 /******************************
 **** COMMUNICATION SECTION ****
