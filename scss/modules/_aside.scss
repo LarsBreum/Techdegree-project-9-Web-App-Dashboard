@@ -13,7 +13,7 @@ aside nav ul {
 	@media screen and (min-width: 768px) {
 		flex-direction: column;
 		align-items: center;
-		width: 68px;
+		width: $w-aside;
 	}
 }
 aside ul li {

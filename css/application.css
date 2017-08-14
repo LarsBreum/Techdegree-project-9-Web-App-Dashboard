@@ -234,10 +234,15 @@ svg {
 ****************************/
 main {
   order: 3;
-  padding: 0; }
+  padding: 0;
+  max-width: 320px; }
   @media screen and (min-width: 768px) {
     main {
-      flex-basis: 100%; } }
+      flex-basis: 100%;
+      max-width: 700px; } }
+  @media screen and (min-width: 1024px) {
+    main {
+      max-width: 956px; } }
 
 .alert {
   text-align: center;
@@ -274,6 +279,7 @@ main {
   margin: 0 auto; }
 
 .line-chart-holder {
+  position: relative;
   margin: 0 auto;
   width: 100%;
   padding-bottom: 20px;

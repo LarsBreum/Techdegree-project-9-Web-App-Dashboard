@@ -4,8 +4,13 @@
 main {
   order: 3;
   padding: 0;
-  @media screen and (min-width: 768px) {
+  max-width: $br-sm;
+  @media screen and (min-width: $br-med) {
     flex-basis: 100%;
+    max-width: $br-med - $w-aside;
+  }
+  @media screen and (min-width: $br-lg) {
+    max-width: $br-lg - $w-aside;
   }
 }
 .alert {
@@ -44,6 +49,7 @@ main {
   }
 }
 .line-chart-holder {
+  position: relative;
   margin: 0 auto;
   width: 100%;
   padding-bottom: $lg-gutter;
