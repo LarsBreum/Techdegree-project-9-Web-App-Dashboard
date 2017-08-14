@@ -13,7 +13,7 @@ body {
 }
 .flex {
 	@include flex ($f-dir: column, $f-wrap: nowrap);
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: $br-med) {
 		flex-flow: row nowrap;
 		justify-content: flex-start	;
 	}
