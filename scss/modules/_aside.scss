@@ -8,7 +8,7 @@ aside {
 }
 aside nav ul {
 	height: 100%;
-	@include flex ($f-just: space-around, $f-dir: column, $f-wrap: nowrap);
+	@include flex ($f-just: space-around, $f-dir: row, $f-wrap: nowrap);
 	padding: 0;
 	@media screen and (min-width: 768px) {
 		flex-direction: column;
@@ -22,6 +22,7 @@ aside ul li {
 	flex-grow: 1;
 	padding: 15px;
 	width: 100%;
+	max-width: 64px;
 	&:hover {
 		@extend %active-nav;
 	}

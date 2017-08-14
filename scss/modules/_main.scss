@@ -47,6 +47,13 @@ main {
   margin: 0 auto;
   width: 100%;
   padding-bottom: $lg-gutter;
+  max-width: $br-sm;
+  @media screen and (min-width: $br-med) {
+    max-width: $br-med;
+  }
+  @media screen and (min-width: $br-lg) {
+    max-width: $br-lg;
+  }
 }
 .active {
   background: $color-brand-bg;

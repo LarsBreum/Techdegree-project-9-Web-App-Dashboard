@@ -28,6 +28,7 @@ function showHourly() {
 	        }]
 	    },
 	    options: {
+	    	responsive: true,
 	        scales: {
 	            yAxes: [{
 	                ticks: {
@@ -60,6 +61,7 @@ function showDaily () {
 	        }]
 	    },
 	    options: {
+	    	responsive: true,
 	        scales: {
 	            yAxes: [{
 	                ticks: {
@@ -92,6 +94,7 @@ function showWeekly () {
 	        }]
 	    },
 	    options: {
+	    	responsive: true,
 	        scales: {
 	            yAxes: [{
 	                ticks: {
@@ -124,6 +127,7 @@ function showMonthly () {
 	        }]
 	    },
 	    options: {
+	    	responsive: true,
 	        scales: {
 	            yAxes: [{
 	                ticks: {

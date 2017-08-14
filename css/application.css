@@ -206,7 +206,7 @@ aside {
 aside nav ul {
   height: 100%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: space-around;
   padding: 0; }
   @media screen and (min-width: 768px) {
@@ -220,7 +220,8 @@ aside ul li {
   list-style-type: none;
   flex-grow: 1;
   padding: 15px;
-  width: 100%; }
+  width: 100%;
+  max-width: 64px; }
   aside ul li path {
     fill: #fbfbfb;
     opacity: 0.5; }
@@ -275,7 +276,14 @@ main {
 .line-chart-holder {
   margin: 0 auto;
   width: 100%;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  max-width: 320px; }
+  @media screen and (min-width: 768px) {
+    .line-chart-holder {
+      max-width: 768px; } }
+  @media screen and (min-width: 1024px) {
+    .line-chart-holder {
+      max-width: 1024px; } }
 
 .active {
   background: #7477bf;
